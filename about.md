@@ -6,9 +6,7 @@ order: 1
 ---
 {% include JB/setup %}
 
-Plus is an open-source software toolkit for data acquisition, pre-processing, and calibration for navigated image-guided interventions. Plus was originally developed for ultrasound-guided interventions (hence the name, Plus - Public software Library for UltraSound imaging research) and it contains all essential functions for implementing tracked ultrasound systems, but it is now widely used in all kind of interventions, with and without ultrasound imaging.
-
-<p><a class="btn" href="features.html">View features &raquo;</a></p>
+Plus is an open-source software toolkit for data acquisition, pre-processing, and calibration for navigated image-guided interventions. Plus was originally developed for ultrasound-guided interventions (hence the name, Plus - Public software Library for UltraSound imaging research) and it contains all essential functions for implementing tracked ultrasound systems, but it is now widely used in all kind of interventions, with and without ultrasound imaging. [See more information on the Features page](features.md).
 
 License
 -------
