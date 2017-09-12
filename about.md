@@ -24,7 +24,8 @@ Development of the Plus library is funded, in part, by the following sources:
 Contributors
 ------------
 
-* [Laboratory for Percutaneous Surgery, Queen's University, Canada](http://perk.cs.queensu.ca)
+Contributing groups and institutions include:
+* [Laboratory for Percutaneous Surgery, Queen's University, Canada](http://perk.cs.queensu.ca) - lead developers
 * [Virtual Augmentation and Simulation for Surgery and Therapy (VASST) laboratory, Robarts Research Institute, Canada](http://www.imaging.robarts.ca/petergrp/Research)
 * [Kitware, Inc](https://www.kitware.com)
 * [Surgical Navigation and Robotics Laboratory, Brigham and Women's Hospital](http://snr.spl.harvard.edu)
