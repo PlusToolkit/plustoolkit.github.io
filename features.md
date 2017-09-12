@@ -7,6 +7,9 @@ description: ""
 ---
 {% include JB/setup %}
 
+Highlights
+-------------
+
 <table>
   <tbody>
     <tr>
@@ -65,7 +68,8 @@ description: ""
   </tbody>
 </table>
 
-<p>
+More features
+-------------
 
 - Matlab interface for real-time sending and receiving of transforms or reading/writing of transforms and image data to/from files (implemented as readily usable Matlab scripts, no need for compiling MEX files, etc.)
 - Automatic testing infrastructure, diagnostic tools, simulators for development and testing without having access to hardware devices
