@@ -68,6 +68,8 @@ Highlights
   </tbody>
 </table>
 
+<br />
+
 More features
 -------------
 
