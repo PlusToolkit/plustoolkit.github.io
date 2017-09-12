@@ -8,7 +8,7 @@ description: ""
 {% include JB/setup %}
 
 Highlights
--------------
+----------
 
 <table>
   <tbody>

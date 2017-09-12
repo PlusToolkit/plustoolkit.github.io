@@ -9,19 +9,19 @@ description: ""
 
 
 API documentation
-=================
+-----------------
 
 - <a href="http://perk-software.cs.queensu.ca/plus/doc/nightly/dev/">PlusLib API documentation</a>: generated nightly from the latest code version.
 
 Testing dashboards
-==================
+------------------
 
 - <a href="http://perkdata.cs.queensu.ca/CDash/index.php?project=PlusLib">PlusLib dashboard</a>: results of automatic tests of the Plus library
 - <a href="http://perkdata.cs.queensu.ca/CDash/index.php?project=PlusApp">PlusApp dashboard</a>: results of automatic tests of the Plus applications
 
 
 Source code
-===========
+-----------
 
 Plus toolkit contains three main repositories:
 - PlusLib: Library that contains all data acquisition and processing implementation. It contains a few sipmle tools and test applications but primarily intended to be linked into software applications.
@@ -30,7 +30,7 @@ Plus toolkit contains three main repositories:
 
 
 Build instructions
-==================
+------------------
 
 <p>See the <a class="wiki_link" href="/wiki/show/plus/Developer_prerequisites" title="Developer prerequisites">Developer prerequisites</a> page for recommended background material for developers using PLUS.</p>
 
