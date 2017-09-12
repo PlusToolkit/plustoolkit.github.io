@@ -18,7 +18,8 @@ description: ""
 			Position data acquisition from various devices, including electromagnetic trackers (Ascension, NDI Aurora) and optical trackers (NDI Polaris and Certus, Claron MicronTracker)
       </div>
 			</td>
-			<td style="text-align: center;"><img src="https://www.assembla.com//spaces/plus/documents/afd6Yqfjar5yoLacwqjQWU/download/afd6Yqfjar5yoLacwqjQWU" /><br />
+			<!-- <td style="text-align: center;"><img src="https://www.assembla.com//spaces/plus/documents/afd6Yqfjar5yoLacwqjQWU/download/afd6Yqfjar5yoLacwqjQWU" /><br /> -->
+      <td style="text-align: center;"><img src="{{ site.url }}/assets/images/NavSystems.png" /><br />
 			<span style="font-size: 13px; text-align: start;">Data acquisition from commercial surgical navigation systems:&nbsp;</span><span style="font-size: 13px; text-align: start;">Medtronic StealthStation navigation system (receives tracking data and planning volume),&nbsp;</span><span style="font-size: 13px; text-align: start;">BrainLab navigation system (receives tracking data, planning volume, and landmarks; through OpenIGTLink) </span></td>
 			<td style="text-align: center;"><img src="https://www.assembla.com//spaces/plus/documents/ay2XLofjar5yk0acwqEsg8/download/ay2XLofjar5yk0acwqEsg8" /><br />
 			<span style="font-size: 13px; text-align: start;">Data acquisition from various positioning devices: p</span><span style="font-size: 13px; text-align: start;">rostate LDR brachytherapy steppers (CIVCO, CMS Accuseed, Burdette Medical Systems),&nbsp;</span><span style="font-size: 13px; text-align: start;">daVinci surgical systems (experimental),&nbsp;</span><span style="font-size: 13px; text-align: start;">Kuka LightWeight robot (through OpenIGTLink)</span></td>
