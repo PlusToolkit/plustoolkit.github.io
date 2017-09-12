@@ -7,12 +7,14 @@ description: ""
 ---
 {% include JB/setup %}
 
+![Trackers1]({{ site.url }}/assets/images/Trackers.png)
+
 <table>
 	<tbody>
 		<tr>
 			<td>
  			<div style="text-align: center;">
-      ![My helpful screenshot]({{ site.url }}/assets/images/Trackers.png)
+      ![Trackers2]({{ site.url }}/assets/images/Trackers.png)
 			Position data acquisition from various devices, including electromagnetic trackers (Ascension, NDI Aurora) and optical trackers (NDI Polaris and Certus, Claron MicronTracker)
       </div>
 			</td>
