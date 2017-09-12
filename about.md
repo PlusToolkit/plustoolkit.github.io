@@ -36,4 +36,4 @@ Citation
 
 If you use PLUS in your project, you have our thanks! If you are considering citing it in your work, you may use the following citation:
 
-    A. Lasso, T. Heffter, A. Rankin, C. Pinter, T. Ungi and G. Fichtinger, "PLUS: Open-Source Toolkit for Ultrasound-Guided Intervention Systems," in IEEE Transactions on Biomedical Engineering, vol. 61, no. 10, pp. 2527-2537, Oct. 2014. doi: 10.1109/TBME.2014.2322864 [link to full text](http://ieeexplore.ieee.org/abstract/document/6813647/)
+> A. Lasso, T. Heffter, A. Rankin, C. Pinter, T. Ungi and G. Fichtinger, "PLUS: Open-Source Toolkit for Ultrasound-Guided Intervention Systems," in IEEE Transactions on Biomedical Engineering, vol. 61, no. 10, pp. 2527-2537, Oct. 2014. doi: 10.1109/TBME.2014.2322864 [link to full text](http://ieeexplore.ieee.org/abstract/document/6813647/)
