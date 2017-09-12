@@ -20,8 +20,8 @@ Download
 
 Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP only. Plus can be built on Linux and Mac OSX operating systems as described in the [Developer's guide](developersguide.md). Plus applications running on a different operating systems can exchange data between each other through OpenIGTLink.
 
-- **[Latest stable release](http://perk-software.cs.queensu.ca/plus/packages/stable/)
-- **[Latest development snapshot](http://perk-software.cs.queensu.ca/plus/packages/nightly): contains the latest features and fixes but it is not tested as thoroughly as stable releases
+- **[Latest stable release](http://perk-software.cs.queensu.ca/plus/packages/stable/)**
+- **[Latest development snapshot](http://perk-software.cs.queensu.ca/plus/packages/nightly):** contains the latest features and fixes but it is not tested as thoroughly as stable releases
 
 **Editions**
 
