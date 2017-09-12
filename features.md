@@ -61,7 +61,7 @@ Highlights
         Support of 8/16-bit grayscale, 24-bit RGB images in 2D+t and 3D+t image streams.  Ultrasound RF to B-mode conversion: brightness conversion and scan conversion, for linear and curvilinear transducers.
       </td>
       <td style="text-align: center;"><img src="{{ site.url }}/assets/images/ModelCatalog.png" /><br />
-        <a href="http://perk-software.cs.queensu.ca/plus/doc/nightly/modelcatalog/"><strong>Catalog of freely usable printable 3D models of tools and tracking fixtures </strong></a>
+        <a href="http://perk-software.cs.queensu.ca/plus/doc/nightly/modelcatalog/">Catalog of freely usable,<br />3D-printable models of tools and tracking fixtures</a>
       </td>
       <td style="text-align: center;">&nbsp;</td>
     </tr>
