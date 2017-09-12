@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+
+    <!-- Le styles -->
+    <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .hero-unit {
+        color:#f0f0f0;
+        text-shadow: 0.1em 0.1em 0.05em black;
+        background-image:url("assets/themes/twitter/img/lumpectomy.jpg");
+      }
+      .hero-unit h1{
+        color:#f0f0f0;
+        text-shadow: 0.05em 0.05em 0.04em black;
+      }
+    </style>
+    <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar">
+	<div class="navbar-inner">
+          <div class="container">
+            <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
+            <ul class="nav">
+              {% assign pages_list = site.pages | sort:"order" %}
+              {% assign group = 'navigation' %}
+              {% include JB/pages_list %}
+            </ul>
+          </div>
+	</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="content">
+        {{ content }}
+      </div>
+
+      <hr>
+
+      <footer>
+	<p>&copy; Plus Toolkit Community and <a href="http://perk.cs.queensu.ca/">PerkLab, Queen's University</a> 2007-2017 </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <script src="{{ ASSET_PATH }}/bootstrap/js/jquery.js"></script>
+    <script src="{{ ASSET_PATH }}/bootstrap/js/bootstrap.min.js"></script>
+    {% include JB/analytics %}
+    
+    <p>&nbsp;</p>
+<a href="http://statcounter.com/" target="_blank" title="click tracking"><img alt="click tracking" src="http://c.statcounter.com/10374521/0/dbd61075/0/" style="border-image-source: none; display: none !important;" /></a>
+
+<p style="text-align: right;"><a href="http://c3.gostats.com/summary.xml?id=352628" target="_blank" title="statistics"><img alt="statistics" border="0" src="http://c3.gostats.com/bin/count/a_352628/t_4/i_79/z_0/show_visitors/counter.png" style="border-width: 0px; width: auto; height: auto; display: none !important;" /></a></p>
+    
+  </body>
+</html>
