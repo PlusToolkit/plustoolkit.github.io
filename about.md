@@ -6,13 +6,7 @@ order: 1
 ---
 {% include JB/setup %}
 
-Plus is an open-source software toolkit for data acquisition, pre-processing, and calibration for navigated image-guided interventions. Plus was originally developed for ultrasound-guided interventions (hence the name, Plus - Public software Library for UltraSound imaging research) and it contains all essential functions for implementing tracked ultrasound systems, but it is now widely used in all kind of interventions, with and without ultrasound imaging. 
-
-
-The [specification of OpenIGTLink](spec) is open, and can be used without any license fee;
-hence OpenIGTLink is suitable for both industrial and academic developers. We also provide
-a reference implementation of the protocol as a [C/C++ library](sdk).
-
+Plus is an open-source software toolkit for data acquisition, pre-processing, and calibration for navigated image-guided interventions. Plus was originally developed for ultrasound-guided interventions (hence the name, Plus - Public software Library for UltraSound imaging research) and it contains all essential functions for implementing tracked ultrasound systems, but it is now widely used in all kind of interventions, with and without ultrasound imaging.
 
 License
 =======

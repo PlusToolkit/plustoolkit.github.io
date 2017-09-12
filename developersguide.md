@@ -2,7 +2,7 @@
 layout: page
 title: Developer's guide
 group: navigation
-order: 2
+order: 4
 description: ""
 ---
 {% include JB/setup %}

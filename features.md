@@ -7,13 +7,14 @@ description: ""
 ---
 {% include JB/setup %}
 
-<div>
 <table>
 	<tbody>
 		<tr>
 			<td>
-			<div style="text-align: center;"><img src="https://www.assembla.com//spaces/plus/documents/d3gx58fi8r5zafacwqjQWU/download/d3gx58fi8r5zafacwqjQWU" style="width: auto;" /></div>
-
+			<!-- <div style="text-align: center;"><img src="https://www.assembla.com//spaces/plus/documents/d3gx58fi8r5zafacwqjQWU/download/d3gx58fi8r5zafacwqjQWU" style="width: auto;" /></div> -->
+ 			<div style="text-align: center;">
+      ![My helpful screenshot]({{ site.url }}/assets/images/Trakers.png)     
+      </div>
 			<div style="text-align: center;"><span style="font-size: 13px; text-align: start;">Position&nbsp;data acquisition from various devices, including&nbsp;</span><span style="font-size: 13px; text-align: start;">electromagnetic trackers (Ascension, NDI Aurora) and o</span><span style="font-size: 13px; text-align: start;">ptical trackers (NDI Polaris and Certus, Claron MicronTracker) </span></div>
 			</td>
 			<td style="text-align: center;"><img src="https://www.assembla.com//spaces/plus/documents/afd6Yqfjar5yoLacwqjQWU/download/afd6Yqfjar5yoLacwqjQWU" /><br />
@@ -69,12 +70,10 @@ description: ""
 		</tr>
 	</tbody>
 </table>
-</div>
 
-<ul>
-	<li>Matlab interface for real-time sending and receiving of transforms or reading/writing of transforms and image data to/from files (implemented as readily usable Matlab scripts, no need for compiling MEX files, etc.)</li>
-	<li>Automatic testing infrastructure, diagnostic tools, simulators for development and testing without having access to hardware devices</li>
-	<li>Fully supported on Windows 32 and 64 bit with VS2008, limited testing is performed with VS2010, VS2012,&nbsp;and with gcc on Linux, occasionally tested on Mac OS X</li>
-	<li>Many research groups and companies use the toolkit worldwide</li>
-	<li>Completely free, no restriction BSD license (for everything, including source code, documentation, CAD models, etc.)</li>
-</ul>
+
+- Matlab interface for real-time sending and receiving of transforms or reading/writing of transforms and image data to/from files (implemented as readily usable Matlab scripts, no need for compiling MEX files, etc.)
+- Automatic testing infrastructure, diagnostic tools, simulators for development and testing without having access to hardware devices
+- Fully supported on Windows 32 and 64 bit with VS2008, limited testing is performed with VS2010, VS2012,&nbsp;and with gcc on Linux, occasionally tested on Mac OS X
+- Many research groups and companies use the toolkit worldwide</li>
+- Completely free, no restriction BSD license (for everything, including source code, documentation, CAD models, etc.)
