@@ -2,7 +2,7 @@
 layout: page
 title: Contact
 group: navigation
-order: 5
+order: 6
 description: ""
 ---
 {% include JB/setup %}
