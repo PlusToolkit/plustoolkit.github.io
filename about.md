@@ -17,15 +17,15 @@ Acknowledgements
 ----------------
 
 Development of the Plus library is funded, in part, by the following sources:
-- Cancer Care Ontario by funding an Applied Cancer Research Unit (2011-2016)
-- CANARIE’s Research Software Program (2017-2020)
-- NIH/NIBIB and NIH/NIGMS via grant 1R01EB021396-01A1 - Slicer+PLUS: Point-of-Care Ultrasound (2017-2019)
+- Cancer Care Ontario by funding an Applied Cancer Research Unit (2011-2016), PI: Gabor Fichtinger, PerkLab, Queen's University
+- CANARIE’s Research Software Program (2017-2020), PI: Gabor Fichtinger, PerkLab, Queen's University
+- NIH/NIBIB and NIH/NIGMS via grant 1R01EB021396-01A1 - Slicer+PLUS: Point-of-Care Ultrasound (2017-2019), PI: Stephen Aylward, Kitware
 
 Contributors
 ------------
 
 Contributing groups and institutions include:
-* [Laboratory for Percutaneous Surgery, Queen's University, Canada](http://perk.cs.queensu.ca) - lead developers
+* [Laboratory for Percutaneous Surgery, Queen's University, Canada](http://perk.cs.queensu.ca) - lead developer
 * [Virtual Augmentation and Simulation for Surgery and Therapy (VASST) laboratory, Robarts Research Institute, Canada](http://www.imaging.robarts.ca/petergrp/Research)
 * [Kitware, Inc](https://www.kitware.com)
 * [Surgical Navigation and Robotics Laboratory, Brigham and Women's Hospital](http://snr.spl.harvard.edu)
