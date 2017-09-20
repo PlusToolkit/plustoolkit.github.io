@@ -1,4 +1,8 @@
-# Legacy Assembla Tickets
+---
+layout: page
+title: Legacy Assembla Tickets
+description: ""
+---
 
 ## #1 Option to manually input synchronization value.
 When the program has to be restarted several times due to other errors, it would save time if we could skip the synchronization step, by just manually typing in the synchronization value of the last run.
@@ -16709,10 +16713,6 @@ status: changed from "New" to "Invalid"
 
 #### 2011-11-22, 20:42:03 - Tamas Heffter
 description: changed from "TODO" to "
-
-~~~~
-
-
   <CoordinateFr..."
 
 #### 2011-11-23, 15:25:20 - Andras Lasso
@@ -47838,15 +47838,7 @@ which allowed to recon again (have to call after each recon).
 #### 2014-09-16, 14:48:19 - Isaiah Norton
 CommentContent: changed from "I don't want restart Slicer (in case) so worked around using:
 
-
-~~~~
-
-
 slicer.modules.PlusRemoteWidget.offlineReconstructButton.setEnabled(1)
-
-
-~~~~
-
 
 
 which allowed to recon again (have to call after each recon).
@@ -47927,10 +47919,6 @@ Warning: In ..\\..\\..\\..\\..\\Slicer-1\\Libs\\MRML\\Core\\vtkObserverManager.c
 I don't have that option, but I selected all messages from View->Error Log, after I click the button:
 
 
-
-~~~~
-
-
 Warning: In ..\\..\\..\\..\\..\\Slicer-1\\Libs\\MRML\\Core\\vtkObserverManager.cxx, line"
 
 #### 2014-09-16, 15:00:17 - Isaiah Norton
@@ -47939,17 +47927,9 @@ CommentContent: changed from "Around 1 minute each time (1.5-2.5 GB recordings).
 I don't have that option, but I selected all messages from View->Error Log, after I click the button:
 
 
-
-~~~~
-
-
 Warning: In ..\\..\\..\\..\\..\\Slicer-1\\Libs\\MRML\\Core\\vtkObserverManager.cxx, line" to "Around 1 minute each time (1.5-2.5 GB recordings).
 
 I don't have that option, but I selected all messages from View->Error Log, after I click the button:
-
-
-
-~~~~
 
 
 Warning: In ..\\..\\..\\..\\..\\Slicer-1\\Libs\\MRML\\Core\\vtkObserverManager.cxx, line"
@@ -53052,16 +53032,8 @@ Bug is in vtkmetaio not vtkMetaImageSequenceIO" to "NDims = 4 is populated throu
 
 in metaObject.cxx:
 
-
-
-~~~~
-
   MET_InitReadField(mF, 'CenterOfRotation', MET_FLOAT_ARRAY, false,
                      nDimsRecordNumber);
-
-
-~~~~
-
 
 
 Bug is in"
@@ -53071,16 +53043,8 @@ CommentContent: changed from "NDims = 4 is populated throughout the 'dependson' 
 
 in metaObject.cxx:
 
-
-
-~~~~
-
   MET_InitReadField(mF, 'CenterOfRotation', MET_FLOAT_ARRAY, false,
                      nDimsRecordNumber);
-
-
-~~~~
-
 
 
 Bug is in" to "Edit nevermind, still investigating."
@@ -61824,10 +61788,6 @@ obliterates *OutputOrigin* and *OutputExtent* settings provided in <VolumeRecons
 
 #### 2017-05-11, 14:46:02 - Dzenan Zukic
 CommentContent: changed from "I am talking about volume reconstructor executable, which in turn invokes vtkPlusVolumeReconstructor. VolumeReconstructor.cxx, line 175 `if (reconstructor->SetOutputExtentFromFrameList(trackedFrameList, transformRepository, errorDetail) != PLUS_SUCCESS)`" to "I am talking about volume reconstructor executable, which in turn invokes vtkPlusVolumeReconstructor. VolumeReconstructor.cxx, line 175:
-
-
-~~~~
-
 if (reconstructor->SetOutputExtentFromFrameList(trackedFrameList, transformRepository, errorDetail) !="
 
 #### 2017-05-11, 14:54:40 - Andras Lasso
