@@ -1,3 +1,4 @@
+# Legacy Assembla Tickets
 
 ## #1 Option to manually input synchronization value.
 When the program has to be restarted several times due to other errors, it would save time if we could skip the synchronization step, by just manually typing in the synchronization value of the last run.
@@ -293,7 +294,9 @@ milestone_id: changed from null to "Release Plus-1.2.0"
 Sequence-metafile converter should be able to create bmp+transforms from the mha files in the following  format:
 
 
+
 ~~~~
+
 
 # ================================ #
 # Transform Data of Captured Image #
@@ -313,7 +316,9 @@ Sequence-metafile converter should be able to create bmp+transforms from the mha
 138.226    0.000154532  0.042437  0.999099  -0.421666  -0.0404242  -2.52015
 
 
+
 ~~~~
+
 
 
 
@@ -386,7 +391,9 @@ Unable to read the phantom definition file: d:\\devel\\Plus-bin\\bin\\config\\Ph
 - Change vtkUSCalibrationControllerTest1 to get  phantom definition as an argument (from the PlusLib data folder)
 
 
+
 ~~~~
+
 
 // Read and parse phantom definition file
   const char* phantomDefinitionFile =  segmentationParameters->GetAttribute('PhantomDefinition'); 
@@ -549,7 +556,9 @@ Unable to read the phantom definition file: d:\\devel\\Plus-bin\\bin\\config\\Ph
 
   //TODO Test if it matches the predefined errors in case of iCal phantom (create phantom definition for it)
 
+
 ~~~~
+
 
 
 
@@ -1044,7 +1053,9 @@ milestone_id: changed from "Plus-2.3.0" to null
 - Change USDataCollection XML config file to the following scheme: 
 
 
+
 ~~~~
+
 
 <USDataCollection v1ersion='1.0'>
     <DeviceSet 
@@ -1119,7 +1130,9 @@ milestone_id: changed from "Plus-2.3.0" to null
             />
 </USDataCollection>
 
+
 ~~~~
+
 
 
 
@@ -1925,7 +1938,9 @@ Create new speed validation function for vtkTrackedFrameList::ValidateData
 
 
 
+
 ~~~~
+
 vtkTrackedFrameList::ValidateSpeed
 {
 dT=abs(T1-T2)
@@ -1943,7 +1958,9 @@ return false;
 return true; 
 }
 
+
 ~~~~
+
 
 
 
@@ -2896,7 +2913,9 @@ Write pointer should point to the next field in the buffer and the read pointer 
 #### 2011-06-04, 00:13:31 - Tamas Heffter
 Seek the buffer without seek function within VolumeReconstruction\\vtkFreehandUltrasound2Helper.h
 
+
 ~~~~
+
 // if we are not doing a real time reconstruction, sleep for a millisecond
     // to give the main application thread some time, and seek to the next video frame
     if (!self->RealTimeReconstruction)
@@ -2914,7 +2933,9 @@ Seek the buffer without seek function within VolumeReconstruction\\vtkFreehandUl
         }
       }
 
+
 ~~~~
+
 
 
 
@@ -3432,7 +3453,9 @@ This case, we don't have to duplicate memory for video buffer writing into metaf
  
 Remove the following memory allocation from vtkDataCollector::WriteVideoBufferToMetafile method: 
 
+
 ~~~~
+
         // Allocate memory for new frame
         int* videoFrameSize = videoBuffer->GetFrameFormat()->GetFrameSize(); 
         TrackedFrame::ImageType::Pointer frame = TrackedFrame::ImageType::New(); 
@@ -3445,7 +3468,9 @@ Remove the following memory allocation from vtkDataCollector::WriteVideoBufferTo
         frame->Allocate();
 
 
+
 ~~~~
+
 
 
 
@@ -3678,10 +3703,14 @@ The problem was that I didn't check the PlusBuild_use_PLTools in CMake. But if i
 #### 2011-07-12, 16:40:30 - Tamas Heffter
 
 1. Move all INCLUDE_EXTERNAL_MSPROJECT to their own CMake project files like: 
+
 ~~~~
 
+
 PlusLib_EXTERNAL_MSPROJECT( ${PlusLib_EXTERNAL_MSPROJECT} ProjName vcprojFile ProjDepends) 
+
 ~~~~
+
 
 2. Include the external projects in the PlusLib Use file. 
 
@@ -5502,7 +5531,9 @@ We could avoid this by just always increase the last frame number by the frame d
 
 
 
+
 ~~~~
+
 if ( currentFrameNumber > LastFramenumber )
 {
   Frameindex += (currentFrameNumber - LastFramenumber)
@@ -5514,7 +5545,9 @@ else
 }
 LastFramenumber = currentFrameNumber;
 
+
 ~~~~
+
 
  
 
@@ -5952,7 +5985,9 @@ filteredTimestamp = timeOffset + itemIndex * framePeriod;
 #### 2011-07-22, 03:30:48 - Tamas Heffter
 
 
+
 ~~~~
+
 % unfilteredts, numberOfAveragedPeriods=20
 function [filteredTs]=tsfilter2(frameNumbers, unfilteredTs, numberOfAveragedPeriods)
 sampleNum=length(unfilteredTs);
@@ -5973,7 +6008,9 @@ for i = (numberOfAveragedPeriods+1) : sampleNum
     filteredTs(i) = timeOffset + frameNumbers(i) * framePeriod;
 end
 
+
 ~~~~
+
 
 
 
@@ -6170,7 +6207,9 @@ The best would be if we could move the xml reading part to SegmentationParameter
 Then we should only call 
 
 
+
 ~~~~
+
 
 vtkSmartPointer<vtkXMLDataElement> segmentationParameters; 
 this->GetSegParameters()->ReadSegmentationParameters(segmentationParameters);
@@ -6179,12 +6218,16 @@ this->GetSegParameters()->ReadPhantomDefinition(phantomDefinition);
 this->GetSegParameters()->ComputeParameters(); 
 this->GetSegParameters()->UpdateParameters(); 
 
+
 ~~~~
+
 
  
 Move the following computation to SegmentationParameters::UpdateParameters() 
 
+
 ~~~~
+
   // Compute error boundaries based on error percents and the NWire definition (supposing that the NWire is regular - parallel sides)
   // Line length of an N-wire: the maximum distance between its wires' front endpoints
   double maxLineLengthSquared = -1.0;
@@ -6258,7 +6301,9 @@ Move the following computation to SegmentationParameters::UpdateParameters()
   LOG_DEBUG('Line pair distance - computed min: ' << minNPlaneDistance << ' , max: ' << maxNPlaneDistance << ';  allowed min: ' << this->GetSegParameters()->GetMinLinePairDistMm() << ', max: ' << this->GetSegParameters()->GetMaxLinePairDistMm());
 
 
+
 ~~~~
+
 
 
 
@@ -11915,14 +11960,18 @@ Save ToolTransform name into sequence metafile for each tool
 Add the following function to PlusVideoFrame:  
 
 
+
 ~~~~
+
 bool PlusVideoFrame::IsImageValid()
 {
   return ( imageData != NULL )
 }
 
 
+
 ~~~~
+
 
 
 Add new field for each frame in the metafile which shows the image data status (OK, INVALID)
@@ -14998,7 +15047,9 @@ Guys,
 I've been working on #377: Relative transform computation should be implemented in the tracking base classes
 I've found the following code snippet in MicronTracker implementation: 
 
+
 ~~~~
+
 if(strcmp(identifiedTemplateName,'patientMarker')==0)
     {
       GetReferenceTransformMatrix(identifedMarkerIndex, mTrackerToReference);
@@ -15012,7 +15063,9 @@ if(strcmp(identifiedTemplateName,'patientMarker')==0)
       this->ToolTimeStampedUpdate( tool->GetToolName(), mToolToReference, TOOL_OK, this->LastFrameNumber, unfilteredTimestamp);
     }
 
+
 ~~~~
+
 
 Could you please tell me some details about it? Is the patientMarker tool your reference tool, and you get all the other transforms relative to that coordinate system? With the new implementation of the tools, we're expecting all tool transforms relative to the tracker coordinate frame and the vtkTransformRepository will compute the tool to reference transformation if desired. Can I change the implementation? 
 
@@ -15410,7 +15463,9 @@ milestone_id: changed from "Release Plus-1.4.2" to "Release Plus-1.5.1"
 ## #354 Update calibration algorithms to use new generic wire pattern 
 
 
+
 ~~~~
+
 
 <Pattern Type='NWire' Name='top' >
 <Wire Name='wire4' EndPointFront='49.86 54.385 62.05' EndPointBack='49.86 54.385 142.05' />
@@ -15423,7 +15478,9 @@ milestone_id: changed from "Release Plus-1.4.2" to "Release Plus-1.5.1"
 <Wire Name='wire3' EndPointFront='9.86 34.385 62.05' EndPointBack='9.86 34.385 142.05' />
 </Pattern>
 
+
 ~~~~
+
 
 
 
@@ -16169,7 +16226,9 @@ Tests used:
 -Basic: Exceptions, Handles, Heaps, Locks, Memory  
 
 
+
 ~~~~
+
 
   <?xml version='1.0' encoding='UTF-8' standalone='no' ?> 
 - <avrf:logfile xmlns:avrf='Application Verifier'>
@@ -16195,7 +16254,9 @@ Tests used:
   </avrf:logSession>
   </avrf:logfile>
 
+
 ~~~~
+
 
 
 
@@ -16602,7 +16663,9 @@ status: changed from "New" to "Invalid"
 ## #385 New class for resolving transform path
 
 
+
 ~~~~
+
 
   <CoordinateFrameDefinitions>
   
@@ -16638,13 +16701,17 @@ status: changed from "New" to "Invalid"
         />
   </Rendering>
 
+
 ~~~~
+
 
 
 
 #### 2011-11-22, 20:42:03 - Tamas Heffter
 description: changed from "TODO" to "
+
 ~~~~
+
 
   <CoordinateFr..."
 
@@ -16961,10 +17028,14 @@ Need to revise test and also fCal.
 
 This is also strange, I guess it's not what we want: 
 
-~~~~
-for (int i=0; i<4; ++i) for (int j=0; j<4; ++j) elements[4*j+i] = stylusTipToReferenceMatrix->GetElement(i,j);
 
 ~~~~
+
+for (int i=0; i<4; ++i) for (int j=0; j<4; ++j) elements[4*j+i] = stylusTipToReferenceMatrix->GetElement(i,j);
+
+
+~~~~
+
 
 
 
@@ -17738,13 +17809,17 @@ It is almost certain that the cause of this error is that PivotCalibration mode 
 The tracking part should look like this:
 
 
+
 ~~~~
+
 <Tracker Type='FakeTracker' BufferSize='1000' Frequency='50' LocalTimeOffset='0.0' Mode='PivotCalibration' AveragedItemsForFiltering='20' >
     <Tool Name='Reference' PortName='0' />
     <Tool Name='Stylus' PortName='1' Model='Example' />
 </Tracker>
 
+
 ~~~~
+
 
 
 By the way, TrackedUltrasoundCapturing is not supported any more, I even removed it from the repository today.
@@ -17809,7 +17884,9 @@ The *vtkDataCollectorHardwareDevice* works fine on its own, but when the sector 
 The following code snippet produces the error, where the *dataCollector* is a pointer of *vtkDataCollectorHardwareDevice* type.
 
 
+
 ~~~~
+
 
 // Change sector size to 50%
 vtkSonixVideoSource* sonixDataCollector= static_cast<vtkSonixVideoSource*> (dataCollector->GetVideoSource() );
@@ -17817,7 +17894,9 @@ sonixDataCollector->SetSector(50);
 
 dataCollector->Start();
 
+
 ~~~~
+
 
 
 121911_172507.717 [ERROR]   [016.838000]  Received frame size (249604 bytes) doesn't match the buffer size (499204 bytes)! [in ..\\..\\..\\PlusLib\\src\\ImageAcquisition\\SonixVideo\\vtkSonixVideoSource.cxx(292)]
@@ -17862,7 +17941,9 @@ The streams (stream name, acquisition type, sector size, etc.) should be describ
 So basically a new class (let's call it vtkSonixStreams) that would inherit from vtkPlusVideoSource and will have three different streams, i.e. something like the following?
 
 
+
 ~~~~
+
 
 class vtkSonixStreams: public vtkPlusVideoSource
 {
@@ -17877,13 +17958,17 @@ protected:
  PlusStatus AddNewFrameToSpecificBuffer( int  );
 }
 
+
 ~~~~
+
 
 
 and the implementation of AddNewFrameToSpecificBuffer would be the following?
 
 
+
 ~~~~
+
 
 PlusStatus vtkSonixStreams::AddNewFrameToSpecificBuffer(int bufferNumber ) //bufferNumber goes from 1 to 3
 {
@@ -17910,7 +17995,9 @@ PlusStatus vtkSonixStreams::AddNewFrameToSpecificBuffer(int bufferNumber ) //buf
  }
 }
 
+
 ~~~~
+
 
 
 
@@ -18353,7 +18440,9 @@ We propose the following three solutions:
 3. Add a new method to vtkPlusVideoSource:
 
 
+
 ~~~~
+
 
 PlusStatus UpdateInternalBuffer( vtkVideoBuffer *newBuffer )
 {
@@ -18361,7 +18450,9 @@ this->Buffer = newBuffer;
 return PlusSuccess;
 }
 
+
 ~~~~
+
 
 
 We are under a time constraint in our project. We just need consent to implement either of the three solutions. We would appreciate it if you don't propose an extension of vtkPlusVideoSource using the VTK_EXPORT macro.
@@ -20482,7 +20573,9 @@ Merge the current vtkVideoBuffer and vtkTrackerBuffer to *vtkPlusStreamBuffer* c
 
 *Current configuration file* 
 
+
 ~~~~
+
   <DataCollection StartupDelaySec='1.0'>
   <Tracker Type='Ascension3DG' BufferSize='500' Frequency='50' LocalTimeOffset='0.0' AveragedItemsForFiltering='20' >
     <Tool Name='Probe' PortName='0' />
@@ -20497,14 +20590,18 @@ Merge the current vtkVideoBuffer and vtkTrackerBuffer to *vtkPlusStreamBuffer* c
   </OpenIGTLink>
   </DataCollection>
 
+
 ~~~~
+
 
 
 
 
 *Proposed configuration file* 
 
+
 ~~~~
+
 <DataCollection StartupDelaySec='1.0'>
   <Device Type='Ascension3DG' BufferSize='500' Frequency='50' LocalTimeOffset='0.0' AveragedItemsForFiltering='20' >
     <Stream Name=”Tracker”>
@@ -20532,7 +20629,9 @@ Merge the current vtkVideoBuffer and vtkTrackerBuffer to *vtkPlusStreamBuffer* c
   </Device>
 </DataCollection>
 
+
 ~~~~
+
 
 
 #### 2012-03-26, 20:16:25 - Tamas Heffter
@@ -20731,7 +20830,9 @@ This config can be used for either 'smart' devices or devices that required the 
 
 *Proposed configuration file* 
 
+
 ~~~~
+
 
 <DataCollection StartupDelaySec='1.0'>
   <Device Type='Ascension3DG' BufferSize='500' Frequency='50' LocalTimeOffset='0.0' AveragedItemsForFiltering='20' >
@@ -20783,7 +20884,9 @@ This config can be used for either 'smart' devices or devices that required the 
   </Device>
 </DataCollection>
 
+
 ~~~~
+
 
 
 #### 2012-10-12, 15:05:06 - Adam Rankin
@@ -21736,12 +21839,16 @@ Qt doesn't provide pre-built VS2010 x64 binaries with the latest release, so we 
 - Start Visual Studio x64 Win64 Command Prompt (2010)  ( Start / All Programs / Microsoft Visual Studio 2010 / Visual Studio Tools )
 - Type the following commands to the console: 
 
+
 ~~~~
+
 $ cd c:\\Qt\\4.7.4-x64\\
 $ configure -shared -debug-and-release -opensource -opengl desktop -platform win32-msvc2010 -mp -nomake examples -nomake demos
 $ nmake
 
+
 ~~~~
+
 
 
 
@@ -21815,7 +21922,9 @@ Here is what I used in another project:
 
 *Create a new CMake include file (VsInterface.rc.in):* 
 
+
 ~~~~
+
 #include <winresrc.h>
 
 VS_VERSION_INFO VERSIONINFO
@@ -21852,11 +21961,15 @@ VS_VERSION_INFO VERSIONINFO
     END
   END
 
+
 ~~~~
+
 
 *This is what we need to add to the actual CMake file:* 
 
+
 ~~~~
+
 SET(VsInterface_RESOURCES)
 IF (WIN32)
   configure_file(
@@ -21872,7 +21985,9 @@ ENDIF()
 ADD_LIBRARY( VsInterface ${VsInterface_SRCS} ${VsInterface_HDRS} ${VsInterface_RESOURCES} )
 ...
 
+
 ~~~~
+
 
 
 Let me know your thoughts. 
@@ -24445,7 +24560,9 @@ status: changed from "Accepted" to "Fixed"
 The build of PlusLib failed on Linux (Ubuntu 12.04 / 64 bit) with following error:
 
 
+
 ~~~~
+
 
 [  1%] Building CXX object src/PlusCommon/CMakeFiles/vtkPlusCommon.dir/vtkAccurateTimer.cxx.o
 /home/thorsten/devel/Plus/PlusExperimental-build/PlusLib/src/PlusCommon/vtkAccurateTimer.cxx: In static member function ‘static std::string vtkAccurateTimer::GetDateString()’:
@@ -24462,7 +24579,9 @@ make[2]: *** [PlusLib-prefix/src/PlusLib-stamp/PlusLib-build] Error 2
 make[1]: *** [CMakeFiles/PlusLib.dir/all] Error 2
 make: *** [all] Error 2
 
+
 ~~~~
+
 
 
 #### 2012-06-11, 13:05:14 - Brennecke
@@ -24510,7 +24629,9 @@ Thanks for your very quick help!
 I want to use Plus with a Polaris tracker and OpenIGTLink as image source. When I try to build it with Polaris support enabled, I receive a linking problem:
 
 
+
 ~~~~
+
 
 Linking CXX shared library /home/thorsten/devel/Plus/PlusExperimental-build/bin/libvtkTracking.so
 /usr/bin/ld: /home/thorsten/devel/Plus/PlusExperimental-build/bin/libvtkndicapi.a(ndicapi.c.o): relocation R_X86_64_32 against `.rodata' can not be used when making a shared object; recompile with -fPIC
@@ -24523,7 +24644,9 @@ make[2]: *** [PlusLib-prefix/src/PlusLib-stamp/PlusLib-build] Error 2
 make[1]: *** [CMakeFiles/PlusLib.dir/all] Error 2
 make: *** [all] Error 2
 
+
 ~~~~
+
 
 
 
@@ -24748,12 +24871,16 @@ status: changed from "New" to "Fixed"
 I tried the updated code and I get the following messages. I seems there is still some gap between the timestamps. I attached the log file.
 
 
+
 ~~~~
+
 
 062112_152329.523|ERROR|018.287000| vtkTrackerBuffer: Failed to get tracker buffer timestamp (time: 4.403397)|in ..\\..\\..\\PlusLib\\src\  racking\\vtkTrackerBuffer.cxx(509)
 062112_152329.625|ERROR|018.390000| Failed to get tracker item from buffer by time: 4.403397 (Latest timestamp: 17.980886   Oldest timestamp: 17.028000).|in ..\\..\\..\\PlusLib\\src\  racking\\vtkTracker.cxx(676)
 
+
 ~~~~
+
 
 
 
@@ -24876,7 +25003,9 @@ Examples:
 These information could be stored in an 'image' element: <Image Name='UsImage' CoordinateFrame='Reference' />
 
 
+
 ~~~~
+
  <PlusOpenIGTLinkServer MaxNumberOfIgtlMessagesToSend='10' MaxTimeSpentWithProcessingMs='50' ListeningPort='18944' > 
     <DefaultClientInfo> 
       <MessageTypes> 
@@ -24893,7 +25022,9 @@ These information could be stored in an 'image' element: <Image Name='UsImage' C
     </DefaultClientInfo>
   </PlusOpenIGTLinkServer>
 
+
 ~~~~
+
 
 
 
@@ -24955,7 +25086,9 @@ So, it will use the Name attribute instead of the currently hard coded 'UsImage'
 You need to change the Client info accordingly (PlusIgtlClientInfo.h): 
 
 
+
 ~~~~
+
 /*! Transform names to send with igt image message */ 
 PlusTransformName ImageTransformName;  
 
@@ -24976,13 +25109,17 @@ and update the following functions, too:
   void ShallowCopy(const PlusIgtlClientInfo& clientInfo); 
  
 
+
 ~~~~
+
 
 
  So, when you send the image message you need to get the image transforms list something like this (vtkPlusOpenIGTLinkServer.cxx): 
 
 
+
 ~~~~
+
 // Set image transform name
     PlusTransformName imageTransformName = this->DefaultImageTransformName; 
     if ( client.ImageTransformName.IsValid() )
@@ -25000,14 +25137,18 @@ to
     }
 
 
+
 ~~~~
+
 
 
 And modify vtkPlusIgtlMessageFactory.cxx like this: 
 
 
 
+
 ~~~~
+
 PlusStatus vtkPlusIgtlMessageFactory::PackMessages(const std::vector<std::string>& igtlMessageTypes, std::vector<igtl::MessageBase::Pointer>& igtlMessages, TrackedFrame& trackedFrame, 
     std::vector<PlusTransformName>& transformNames, PlusTransformName& imageTransformName, vtkTransformRepository* transformRepository/*=NULL*/)
 
@@ -25016,7 +25157,9 @@ to
 PlusStatus vtkPlusIgtlMessageFactory::PackMessages(const std::vector<std::string>& igtlMessageTypes, std::vector<igtl::MessageBase::Pointer>& igtlMessages, TrackedFrame& trackedFrame, 
     std::vector<PlusTransformName>& transformNames, std::vector<PlusTransformName>& imageTransformNames, vtkTransformRepository* transformRepository/*=NULL*/)
 
+
 ~~~~
+
 
 
 
@@ -25024,7 +25167,9 @@ and
 
   
 
+
 ~~~~
+
  if ( STRCASECMP(messageType.c_str(), 'IMAGE') == 0 )
     {
       igtl::Matrix4x4 igtlMatrix; 
@@ -25064,7 +25209,9 @@ for ( std::vector<PlusTransformName>::iterator transformNameIterator = imageTran
 }
 
 
+
 ~~~~
+
 
 
 and modify vtkPlusIgtlMessageCommon::PackImageMessage and vtkPlusIgtlMessageCommon::UnpackImageMessage to use the device name and add the transform to the tracked frame in the UnpackImageMessage with the transform name constructed from device name. 
@@ -25597,12 +25744,16 @@ This is the key issue:
 It may be possible that the connection and query should be performed in the same thread.
 Could you add the following two lines at the end of vtkBkProFocusOemVideoSource::InternalConnect() to see if we can acquire frames from the same thread?
 
+
 ~~~~
+
 
 this->Recording=true; 
 InternalUpdate();
 
+
 ~~~~
+
 
 
 You can also test with the vtkBkProFocusOemVideoSourceTest (you don't need a config file and you don't have to manually click on the GUI, etc).
@@ -25975,7 +26126,9 @@ Root cause of the problem: fCal expects some configuration settings that it shou
 Workaround: Add the missing elements, for example:
 
 
+
 ~~~~
+
   <fCal
     NumberOfCalibrationImagesToAcquire='200'
     NumberOfValidationImagesToAcquire='100'
@@ -26029,7 +26182,9 @@ Workaround: Add the missing elements, for example:
   </CoordinateDefinitions>
 
 
+
 ~~~~
+
 
 
 
@@ -26154,7 +26309,9 @@ Note: any earlier config files have to be updated to the new structure to allow 
 Old structure:
 
 
+
 ~~~~
+
 <PlusConfiguration version='1.4'>
   <DataCollection …>
     <ImageAcquisition   …/>
@@ -26175,13 +26332,17 @@ Old structure:
 </PlusConfiguration>
 
 
+
 ~~~~
+
 
 
 New structure:
 
 
+
 ~~~~
+
 <PlusConfiguration version='1.4'>
   <DataCollection …>
     <ImageAcquisition   …>
@@ -26203,7 +26364,9 @@ New structure:
 </PlusConfiguration>
 
 
+
 ~~~~
+
 
 
 
@@ -27344,7 +27507,9 @@ Just a few comments:
 * We already do something similar in vtkSonixVolumeReader (I needed it for the MUSiiC library), we basically just save all the imaging parameters to the tracked frame as a custom frame field and read it at PlusUsMessage::SetTrackedFrame method if available: 
 
 
+
 ~~~~
+
 trackedFrame.SetCustomFrameField('SonixTransmitFrequency', strTransmitFrequency.str()); 
 trackedFrame.SetCustomFrameField('SonixSamplingFrequency', strSamplingFrequency.str()); 
 ...
@@ -27352,7 +27517,9 @@ trackedFrame.SetCustomFrameField('SonixSamplingFrequency', strSamplingFrequency.
 {
 ...
 }
+
 ~~~~
+
 
  
 * The other thing in my mind is unfortunately you cannot force the user to use the same depth you have in the config file, because you can override that setting from the US console (and in the OR looks like they do it pretty often). We can still check the depth every time we receive a frame and either modify the config file (you can have different depth recordings, so it's not a good practice) or save it to each tracked frame  (since you can change the imaging parameters any time, maybe this would be the most adequate solution). 
@@ -27488,7 +27655,9 @@ So, the proposed implementation:
 * Implement a 'switcher' device that can automatically redirect multiple _synchronized_ input streams to one virtual output stream. There wouldn't be any mixing, synchronization, etc. just pure forwarding, so having discrete switches would not cause any problem. The output of the switcher could replace the different inputs (e.g., UsImageDepth40ToTracker -> UsImageToTrackerl; either defined manually or performed automatically), so a single image/transform name could be broadcasted.
 
 
+
 ~~~~
+
 
 
 <DataCollection ... >
@@ -27525,7 +27694,9 @@ So, the proposed implementation:
 </CoordinateDefinitions>
 
 
+
 ~~~~
+
 
 
 
@@ -27533,7 +27704,9 @@ So, the proposed implementation:
 This approach sounds good to me, but not sure Transform repository is ready for these custom fields (it needs to now which transform to use). 
 What if we add another xml structure to store all the different calibration results and on pre-defined settings change (like depth) we just update the current transform repository with the right calibration file.  For this, data collector should get a notification to update transform repository (and it needs to have access to transform repository) with transform selected. 
 
+
 ~~~~
+
 <CalibratedCoordinateDefinitions>
     <Transform From='Image' To='TransducerOriginPixel'
       Matrix='1 0 0 -410 0 1 0 5 0 0 1 0 0 0 0 1'
@@ -27546,7 +27719,9 @@ What if we add another xml structure to store all the different calibration resu
       DepthMm='60'
     />
 </CalibratedCoordinateDefinitions>
+
 ~~~~
+
 
   
 
@@ -31936,7 +32111,9 @@ Proposed configuration structure:
 
 
 
+
 ~~~~
+
 <DeviceConfiguration StartupDelaySec='1.0'>
   <DeviceSet ... />
   <Device ... >
@@ -31958,7 +32135,9 @@ Proposed configuration structure:
   </Device>
 </DeviceConfiguration>
 
+
 ~~~~
+
 
 
 
@@ -31973,7 +32152,9 @@ Unrelated, but once we are at changing the structure: having the DeviceSet as a 
 Updated config:
 
 
+
 ~~~~
+
 <DataCollection StartupDelaySec='1.0'>
   <DeviceSet ... />
   <Device ... >
@@ -31995,7 +32176,9 @@ Updated config:
   </Device>
 </DataCollection>
 
+
 ~~~~
+
 
 
 
@@ -32436,11 +32619,15 @@ Cleaned up calls to channel data request.
 Looking good! This change was very satisfying.
 
 
+
 ~~~~
+
 
 this->SelectedChannel->GetOwnerDevice()->GetBrightnessOutput(*(this->SelectedChannel)
 
+
 ~~~~
+
 
 
 just made me sad...
@@ -32490,7 +32677,9 @@ status: changed from "New" to "Accepted"
 Using PlusConfiguration_SonixTouch_Ascension3DG_L14_fCal2.0.xml at revision 2484
 
 
+
 ~~~~
+
 <Transform From='Image' To='Probe'
       Matrix='
         0.000109388  0.0723958  0.00110216  12.3302
@@ -32513,7 +32702,9 @@ Using PlusConfiguration_SonixTouch_Ascension3DG_L14_fCal2.0.xml at revision 2484
         0  0  0  1'
        Error='0.529051' Date='021213_124232'/>
 
+
 ~~~~
+
 
 
 
@@ -33376,10 +33567,14 @@ http://markmail.org/thread/pbsymaks4teechii#query:+page:1+mid:jrrvghvd2korke27+s
 However, I don't understand what he means by
 
 
-~~~~
-Then make sure you have specified vtkMath lib in your CMake file or project page (if you are not using CMake).
 
 ~~~~
+
+Then make sure you have specified vtkMath lib in your CMake file or project page (if you are not using CMake).
+
+
+~~~~
+
 
 
 First off, there is no vtkMath, it is part of vtkCommon.
@@ -35768,7 +35963,9 @@ Tested successfully with url:https://www.assembla.com/spaces/plus/documents/acwz
 
 
 
+
 ~~~~
+
 <PlusConfiguration version='2.1'>
   <DataCollection StartupDelaySec='1'>
     <DeviceSet Name='CPRValidate' Description='NDI Polaris for tracking'/>    
@@ -35794,7 +35991,9 @@ Tested successfully with url:https://www.assembla.com/spaces/plus/documents/acwz
   <vtkPivotCalibrationAlgo ObjectMarkerCoordinateFrame='Stylus' ReferenceCoordinateFrame='Reference' ObjectPivotPointCoordinateFrame='StylusTip'/>
 </PlusConfiguration>
 
+
 ~~~~
+
 
 
 
@@ -36165,10 +36364,14 @@ As suspected, the code is borked.
 Currently there is no issue for local grabbers as the grab/release execution model on a local grabber is sufficiently fast.
 However, for network grabbers (from the SDK):
 
-~~~~
-FrmGrab_Start function signals the frame grabber to prepare for capturing frames with maximum frame rate. Currently, it doesn't matter for local grabbers, however it's really important for network grabbers. For network grabbers, this function turns streaming on, otherwise FrmGrab_Frame will have to work on request/response basis, which is much slower
 
 ~~~~
+
+FrmGrab_Start function signals the frame grabber to prepare for capturing frames with maximum frame rate. Currently, it doesn't matter for local grabbers, however it's really important for network grabbers. For network grabbers, this function turns streaming on, otherwise FrmGrab_Frame will have to work on request/response basis, which is much slower
+
+
+~~~~
+
 
 
 
@@ -39472,10 +39675,14 @@ Commit: r:4573|plus:4573
 In file vtkPhantomLandmarkRegistrationAlgo.cxx, line 85 looks like follow:
  
 
-~~~~
-itk::Similarity3DTransform<double>::Pointer transform = itk::Similarity3DTransform<double>::New();
 
 ~~~~
+
+itk::Similarity3DTransform<double>::Pointer transform = itk::Similarity3DTransform<double>::New();
+
+
+~~~~
+
 
 
 This is an object for landmark based transform of the fCal phantom. But in the class itk::LandmarkBasedTransformInitializer, there is information, that 'Currently, the  following transforms are supported by the class: VersorRigid3DTransform,  Rigid2DTransform'. As Similarity3DTransform inherits VersorRigid3DTransform, there is no compilation or runtime error, but the transformation is not a Similarity transform (there is no scaling). There is the same issue in the class vtkPhantomLinearObjectRegistrationAlgo, maybe also in other classes?
@@ -39539,7 +39746,9 @@ PlusServerRemoteControl seems to work fine, but from Slicer the OpenIGTLinkRemot
 
 
 
+
 ~~~~
+
 <Command Name='StartRecording' CaptureDeviceId='CaptureDevice' OutputFilename='RecordedSequence.mha'/>
 
 <Command Name='StopRecording' CaptureDeviceId='CaptureDevice'/>
@@ -39547,7 +39756,9 @@ PlusServerRemoteControl seems to work fine, but from Slicer the OpenIGTLinkRemot
 <Command Name='ReconstructVolume' InputSeqFilename='RecordedSequence.mha' OutputVolFilename='volumeReconstructionOutput.mha' OutputVolDeviceName='recvol_Reference'/>
 
 
+
 ~~~~
+
 
 
 It works fine but the reply is: Waiting for reply...
@@ -40716,14 +40927,18 @@ e.g.,
 If the contents of PlusConfig.xml is:
 
 
+
 ~~~~
+
 <PlusConfig
 ...
   DeviceSetConfigurationDirectory='../config'
 ...
 />
 
+
 ~~~~
+
 
 then this should work:
 _PlusServer.exe --config-file=PlusConfiguration_File_PlusServer.xml_
@@ -43223,7 +43438,9 @@ status: changed from "New" to "Test"
 #### 2014-03-19, 12:19:27 - mmscr
 Everything works as expected if I initialize the boolean flag keepConnected to 'false' instead of 'true' (see line 361, file PlusServerRemoteControl.cxx). Left as it is now(true), makes the client to loop infinitely, read and print the TRANSFORM messages, even though the --keep-connected flag is not used. I've noticed this behavior while running the client without any flag whatsoever - in this case, the statement
 
+
 ~~~~
+
 
  if ( command.empty() && !keepConnected)
   {
@@ -43232,7 +43449,9 @@ Everything works as expected if I initialize the boolean flag keepConnected to '
     exit(EXIT_FAILURE); 
   }
 
+
 ~~~~
+
 
 does not behave as expected, i.e., it doesn't exit the program.
 
@@ -44659,7 +44878,9 @@ Compounding == MEAN: mean of all pixel values in the output volume
 
 Before disabling the MAXIMUM&LINEAR combination I would try how the results look if we compute the updated pixel like NONE&LINEAR but we only modify the volume if the new pixel is brighter (f=fraction of the input pixel inside the output voxel):
 
+
 ~~~~
+
 
 if (*inPtrTmp > *outPtrTmp)
 {
@@ -44670,7 +44891,9 @@ else
   // darker value, ignore it
 }
 
+
 ~~~~
+
 
 
 
@@ -45483,7 +45706,9 @@ The ToolReferenceFrame attribute must be within the tracker device tag.
 
 You have 
 
+
 ~~~~
+
     <Device
       Id='TrackerDevice'
       Type='PolarisTracker'
@@ -45493,14 +45718,18 @@ You have
       LocalTimeOffsetSec='0.0'>
       ToolReferenceFrame='Tracker'
 
+
 ~~~~
+
 
 
 and it must be
 
 
 
+
 ~~~~
+
     <Device
       Id='TrackerDevice'
       Type='PolarisTracker'
@@ -45511,7 +45740,9 @@ and it must be
       ToolReferenceFrame='Tracker'>
 
 
+
 ~~~~
+
 
 
 #### 2014-05-29, 14:23:11 - Andras Lasso
@@ -46012,10 +46243,14 @@ You can easily delete Qt variables in CMake Grouped view, by selecting Qt and cl
 I have found that {QT_LIBRARIES} is properly generated as
 
 
-~~~~
-optimized;D:/Qt/4.8.5_x64/lib/QtGui4.lib;debug;D:/Qt/4.8.5_x64/lib/QtGuid4.lib;optimized;D:/Qt/4.8.5_x64/lib/QtCore4.lib;debug;D:/Qt/4.8.5_x64/lib/QtCored4.lib 
 
 ~~~~
+
+optimized;D:/Qt/4.8.5_x64/lib/QtGui4.lib;debug;D:/Qt/4.8.5_x64/lib/QtGuid4.lib;optimized;D:/Qt/4.8.5_x64/lib/QtCore4.lib;debug;D:/Qt/4.8.5_x64/lib/QtCored4.lib 
+
+
+~~~~
+
 
 
 And now I know that fCal links against a tiny .lib which loads the appropriate .dll
@@ -46032,11 +46267,15 @@ I would check QVTK.dll (vtk could cause the problem too) and all fCal dependent 
 My linker dependences shows only debug libs for Qt: 
 
 
+
 ~~~~
+
 
 kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\QVTK.lib;D:\\devel\\Qt\\4.7.4-x64\\lib\\Qt3Supportd4.lib;D:\\devel\\Qt\\4.7.4-x64\\lib\\QtGuid4.lib;D:\\devel\\Qt\\4.7.4-x64\\lib\\QtXmld4.lib;D:\\devel\\Qt\\4.7.4-x64\\lib\\QtSqld4.lib;D:\\devel\\Qt\\4.7.4-x64\\lib\\QtNetworkd4.lib;D:\\devel\\Qt\\4.7.4-x64\\lib\\QtCored4.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\CommonWidgets.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkImageAcquisition.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkPlusCommon.lib;ITKIO.lib;itkvnl.lib;itkvnl_algo.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkCommon.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkRendering.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkHybrid.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkCharts.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkCalibrationAlgo.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkTracking.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkDataCollection.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkVolumeReconstruction.lib;OpenIGTLink.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\QVTK.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkQtChart.lib;D:\\devel\\Qt\\4.7.4-x64\\lib\\QtOpenGLd4.lib;D:\\devel\\Qt\\4.7.4-x64\\lib\\QtWebKitd4.lib;D:\\devel\\Qt\\4.7.4-x64\\lib\\QtXmlPatternsd4.lib;D:\\devel\\Qt\\4.7.4-x64\\lib\\Qt3Supportd4.lib;D:\\devel\\Qt\\4.7.4-x64\\lib\\QtGuid4.lib;D:\\devel\\Qt\\4.7.4-x64\\lib\\QtXmld4.lib;D:\\devel\\Qt\\4.7.4-x64\\lib\\QtSqld4.lib;D:\\devel\\Qt\\4.7.4-x64\\lib\\QtNetworkd4.lib;D:\\devel\\Qt\\4.7.4-x64\\lib\\QtCored4.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkViews.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkInfovis.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkWidgets.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkVolumeRendering.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\PatternLocAlgo.lib;ITKAlgorithms.lib;ITKNumerics.lib;ITKStatistics.lib;itkNetlibSlatec.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkImageAcquisition.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkUsSimulatorAlgo.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkRfProcessingAlgo.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkTracking.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkPlusOpenIGTLink.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkSignaling.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkPlusCommon.lib;ITKIO.lib;ITKNrrdIO.lib;itkgdcm.lib;itkjpeg12.lib;itkjpeg16.lib;itkopenjpeg.lib;snmpapi.lib;rpcrt4.lib;itkpng.lib;itktiff.lib;itkjpeg8.lib;ITKSpatialObject.lib;ITKMetaIO.lib;ITKDICOMParser.lib;ITKEXPAT.lib;ITKniftiio.lib;ITKznz.lib;itkzlib.lib;ITKTransformIOReview.lib;ITKBasicFilters.lib;ITKCommon.lib;itksys.lib;itkvnl_inst.lib;itkvnl_algo.lib;itkvnl.lib;itkvcl.lib;itkv3p_netlib.lib;itkv3p_lsqr.lib;Psapi.lib;Winmm.lib;OpenIGTLink.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkHybrid.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkParallel.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkRendering.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkGraphics.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkImaging.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkIO.lib;comctl32.lib;wsock32.lib;opengl32.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkFiltering.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtkCommon.lib;D:\\devel\\VSIBuild-x64\\bin\\Debug\\vtksys.lib;ws2_32.lib
 
+
 ~~~~
+
 
 
 #### 2014-06-12, 17:24:03 - Tamas Heffter
@@ -47571,7 +47810,9 @@ Perhaps this is why, from the Slicer log:
 
 
 
+
 ~~~~
+
 
 Traceback (most recent call last):
   File 'C:/Users/in016/AppData/Roaming/NA-MIC/Extensions-23642/SlicerIGT/lib/Slicer-4.3/qt-scripted-modules/PlusRemote.py', line 1381, in getCommandReply
@@ -47580,7 +47821,9 @@ Traceback (most recent call last):
     commandResponse=textNode.GetText(0)
 AttributeError: 'NoneType' object has no attribute 'GetText'
 
+
 ~~~~
+
 
 
 #### 2014-09-16, 14:48:19 - Isaiah Norton
@@ -47595,11 +47838,15 @@ which allowed to recon again (have to call after each recon).
 #### 2014-09-16, 14:48:19 - Isaiah Norton
 CommentContent: changed from "I don't want restart Slicer (in case) so worked around using:
 
+
 ~~~~
+
 
 slicer.modules.PlusRemoteWidget.offlineReconstructButton.setEnabled(1)
 
+
 ~~~~
+
 
 
 which allowed to recon again (have to call after each recon).
@@ -47631,7 +47878,9 @@ Around 1 minute each time (1.5-2.5 GB recordings).
 I don't have that option, but I selected all messages from View->Error Log, after I click the button:
 
 
+
 ~~~~
+
 
 Warning: In ..\\..\\..\\..\\..\\Slicer-1\\Libs\\MRML\\Core\\vtkObserverManager.cxx, line 131
 vtkObserverManager (0000000010358D50): Setting the same object should be a no-op.
@@ -47662,7 +47911,9 @@ qSlicerVolumeResliceDriverModuleWidget::onLayoutChanged
 qSlicerVolumeResliceDriverModuleWidget::onLayoutChanged 
 qSlicerVolumeResliceDriverModuleWidget::onLayoutChanged 
 
+
 ~~~~
+
 
 
 #### 2014-09-16, 15:00:17 - Isaiah Norton
@@ -47676,7 +47927,9 @@ Warning: In ..\\..\\..\\..\\..\\Slicer-1\\Libs\\MRML\\Core\\vtkObserverManager.c
 I don't have that option, but I selected all messages from View->Error Log, after I click the button:
 
 
+
 ~~~~
+
 
 Warning: In ..\\..\\..\\..\\..\\Slicer-1\\Libs\\MRML\\Core\\vtkObserverManager.cxx, line"
 
@@ -47686,14 +47939,18 @@ CommentContent: changed from "Around 1 minute each time (1.5-2.5 GB recordings).
 I don't have that option, but I selected all messages from View->Error Log, after I click the button:
 
 
+
 ~~~~
+
 
 Warning: In ..\\..\\..\\..\\..\\Slicer-1\\Libs\\MRML\\Core\\vtkObserverManager.cxx, line" to "Around 1 minute each time (1.5-2.5 GB recordings).
 
 I don't have that option, but I selected all messages from View->Error Log, after I click the button:
 
 
+
 ~~~~
+
 
 Warning: In ..\\..\\..\\..\\..\\Slicer-1\\Libs\\MRML\\Core\\vtkObserverManager.cxx, line"
 
@@ -49313,7 +49570,9 @@ Commit: r:3963|plus:3963
 #### 2015-02-08, 17:21:11 - Adam Rankin
 @lassoan What do you think of a configuration like this:
 
+
 ~~~~
+
     <Device
       Id='VideoDevice' 
       Type='Epiphan' >
@@ -49332,7 +49591,9 @@ Commit: r:3963|plus:3963
       </OutputChannels>
     </Device>
 
+
 ~~~~
+
 
 Pros: more explicit, can be dropped into any device (for example, openIGTLink video source) to have the same effect
 Cons: need to link DataSourceIdOutput to a valid data source
@@ -50365,7 +50626,9 @@ Running fCal with default configuration file for Telemed scanner produces the be
 Matthieu Heitz, who committed the original support for Telemed last year says it worked back then. Therefore the reason is almost certainly some changes in PlusLib done since. To get it to compile, for example, frame size needed to be changed from 2D to 3D (the third dimension ==1). vtkTelemedVideoSourceTest is running correctly.
 
 
+
 ~~~~
+
 Software version: Plus-2.1.2.4088 - Win32
 Toolbox changed to Configuration
 Device set configuration is read from file: C:\\Dev\\PlusBuild-bin\\PlusLib\\data\\ConfigFiles\\PlusDeviceSet_Server_TelemedVideoCapture.xml
@@ -50383,13 +50646,17 @@ No phantom registration algorithm configuration are found - no phantom will be s
 TelemedUltrasound::Stop
 Before return NULL
 No frame received by the device
+
 ~~~~
+
 
 
 #### 2015-04-10, 21:11:51 - Dzenan Zukic
 Copying fCal and Rendering elements from _PlusDeviceSet_fCal_BKProstate_Epiphan_NDIPolaris_20130517_102238.xml_ gets rid of the error messages, and replaces them with warnings. However, the server is not started. Here is the log:
 
+
 ~~~~
+
 |INFO|005.696000| No phantom registration algorithm configuration are found - no phantom will be shown|in C:\\Dev\\PlusBuild-bin\\PlusApp\\fCal\  oolboxes\\ConfigurationToolbox.cxx(549)
 |INFO|024.826000| Device set configuration is read from file: C:\\Dev\\PlusBuild-bin\\PlusLib\\data\\ConfigFiles\\PlusDeviceSet_Server_TelemedVideoCapture.xml|in C:\\Dev\\PlusBuild-bin\\PlusApp\\fCal\  oolboxes\\ConfigurationToolbox.cxx(159)
 |INFO|024.836000| Connect to devices|in C:\\Dev\\PlusBuild-bin\\PlusApp\\fCal\  oolboxes\\ConfigurationToolbox.cxx(169)
@@ -50401,7 +50668,9 @@ Copying fCal and Rendering elements from _PlusDeviceSet_fCal_BKProstate_Epiphan_
 |WARNING|026.523000| No phantom definition is found in the XML tree!|in C:\\Dev\\PlusBuild-bin\\PlusApp\\CommonWidgets\\vtkImageVisualizer.cxx(855)
 |INFO|026.531000| No phantom registration algorithm configuration are found - no phantom will be shown|in C:\\Dev\\PlusBuild-bin\\PlusApp\\fCal\  oolboxes\\ConfigurationToolbox.cxx(549)
 
+
 ~~~~
+
 
 
 
@@ -50746,7 +51015,9 @@ status: changed from "Test" to "Fixed"
 #### 2015-07-02, 17:05:59 - Dzenan Zukic
 Regarding IDL compiler output, the file \\PlusLib\\src\\DataCollection\\CMakeLists.txt already contains the required command (I added it earlier), it just needs to be un-commented:
 
+
 ~~~~
+
   # ADD_CUSTOM_COMMAND(OUTPUT 
   # Telemed/Usgfw2_h.h
   # Telemed/dlldata.c
@@ -50755,7 +51026,9 @@ Regarding IDL compiler output, the file \\PlusLib\\src\\DataCollection\\CMakeLis
     # COMMAND midl.exe /out ./Telemed /header Usgfw2_h.h /no_robust ${TELEMED_INCLUDE_DIR}/Usgfw2.idl
   # )
 
+
 ~~~~
+
 
 I don't remember any more whether the generated files are identical to the ones provided by Telemed.
 
@@ -52586,7 +52859,9 @@ As per description here: url:https://www.assembla.com/spaces/plus/messages/52495
 
 
 
+
 ~~~~
+
 When BUILD_TESTING is not enabled, it doesn't build PlusServer, but PlusServerLauncher still tries to start the process, however logging does not tell exactly what could be the issue.
 It would be good to notify the user, if the plusServerExecutable file does not exist (in bool PlusServerLauncherMainWindow::startServer), or build PlusServer executable even if BUILD_TESTING is off.
 
@@ -52595,7 +52870,9 @@ Here is the output from the log using Plus 2.2 branch:
 |ERROR|005.483000| Failed to start server process| in ..\\..\\PlusApp\\PlusServerLauncher\\PlusServerLauncherMainWindow.cxx(147)
 
 
+
 ~~~~
+
 
 
 
@@ -52776,11 +53053,15 @@ Bug is in vtkmetaio not vtkMetaImageSequenceIO" to "NDims = 4 is populated throu
 in metaObject.cxx:
 
 
+
 ~~~~
+
   MET_InitReadField(mF, 'CenterOfRotation', MET_FLOAT_ARRAY, false,
                      nDimsRecordNumber);
 
+
 ~~~~
+
 
 
 Bug is in"
@@ -52791,11 +53072,15 @@ CommentContent: changed from "NDims = 4 is populated throughout the 'dependson' 
 in metaObject.cxx:
 
 
+
 ~~~~
+
   MET_InitReadField(mF, 'CenterOfRotation', MET_FLOAT_ARRAY, false,
                      nDimsRecordNumber);
 
+
 ~~~~
+
 
 
 Bug is in" to "Edit nevermind, still investigating."
@@ -53262,11 +53547,15 @@ This zip file includes the following files:
 
 1.a Line 77 added, 
 
+
 ~~~~
+
 
 OPTION(PLUSBUILD_USE_QT5 'Plus uses QT5 instead of QT4' ON)
 
+
 ~~~~
+
 
 1.b Lines 199-226: Added an if-statement to find Qt5 and Qt4 depending on PLUSBUILD_USE_QT5 switch.
 
@@ -53275,32 +53564,44 @@ Notes: I am unsure how to properly find Qt5, the path is hard-coded at the momen
 2. External_VTK.cmake: This is the same as *PlusExperimental-build/External_VTK.cmake*. I only made three minor changes to this file:
 2.a. Line 35 added, 
 
+
 ~~~~
+
 
 OPTION(PLUSBUILD_USE_QT5 'Plus uses QT5 instead of QT4' ON)
 
+
 ~~~~
+
 
 2.b Line 47 and 48, added Qt5 version specific arguments.
 
+
 ~~~~
+
 
 SET(VTK_VERSION_SPECIFIC_ARGS ${VTK_VERSION_SPECIFIC_ARGS}
     -DCMAKE_PREFIX_PATH:STRING=C:/Qt/5.5.0/qt-5.5.0-x64-msvc2013-rev0/lib/cmake/
     -DVTK_QT_VERSION:STRING=5
     )
 
+
 ~~~~
+
 
 Notes: I am not sure how to pass PLUSBUILD_USE_QT5 from item 1 to External_VTK.cmake, and I am not sure how to pass CMAKE_PREFIX_PATH properly.
 
 3. PlusLib.patch. Only one minor change, I added a convinience macro, i.e.:
 
+
 ~~~~
+
 
 #define QT_MAJOR_VERSION @VTK_QT_VERSION@
 
+
 ~~~~
+
 
 4. PlusApp.patch: (these changes are Qt4 compatible)
 4.a Changed *FIND_PACKAGE(Qt)* according to the right version in CMakeLists.txt files.
@@ -53341,7 +53642,9 @@ Reinstalling the application may fix this problem._
 
 I suspect that you will have the same problem for fCal when you migrate to Qt5. You can solve this problem by adding *qwindows.dll* to the *platforms* directory that is created in your bin directory. In this case, your deployment directory will look like this:
 
+
 ~~~~
+
 
 
 /YourAppInstallFolder
@@ -53350,7 +53653,9 @@ I suspect that you will have the same problem for fCal when you migrate to Qt5. 
      -/platforms
         - qwindows.dll
 
+
 ~~~~
+
 
 See these links for more details:
 http://doc.qt.io/qt-5/windows-deployment.html#qt-plugins
@@ -53398,25 +53703,33 @@ Commit: r:4259|plus:4259
 #### 2015-08-19, 17:21:05 - Siavash Khallaghi
 Adam, I did not manage to get *SET(CMAKE_AUTOMOC ON)* working for CMake. The documentation is confusing. But you can follow the same set of rules as Qt4, i.e. 
 
+
 ~~~~
+
 
 QT4_WRAP_CPP( fCal_QT_MOC_Files ${fCal_UI_HDRS} )        
 QT4_WRAP_UI( fCal_QT_UI_Headers ${fCal_UI_SRCS} )
 QT4_WRAP_CPP( fCal_QT_MOC_UI_Files ${fCal_QT_UI_Headers} )
 QT4_ADD_RESOURCES( fCal_QT_RCC_Files ${fCal_QT_Resources} )
 
+
 ~~~~
+
 
 becomes:
 
+
 ~~~~
+
 
 QT5_WRAP_CPP( fCal_QT_MOC_Files ${fCal_UI_HDRS} )        
 QT5_WRAP_UI( fCal_QT_UI_Headers ${fCal_UI_SRCS} )
 QT5_WRAP_CPP( fCal_QT_MOC_UI_Files ${fCal_QT_UI_Headers} )
 QT5_ADD_RESOURCES( fCal_QT_RCC_Files ${fCal_QT_Resources} )
 
+
 ~~~~
+
 
 Also, you can change *Qt::WFlags* to *Qt:WindowFlags*, which works for Qt4.8 as well.
 
@@ -54378,7 +54691,9 @@ Applications can receive tracking streams of type TDATA from using STT_TDATA and
 Enable support for sending TDATA streams, and sending receiving appropriate messages.
 
 
+
 ~~~~
+
 ...
 <PlusOpenIGTLinkServer
 MaxNumberOfIgtlMessagesToSend='1'
@@ -54390,7 +54705,9 @@ OutputChannelId='TrackingStream' >
 <Message Type='TDATA' />
 ...
 
+
 ~~~~
+
 
 
 See https://www.assembla.com/spaces/plus/messages/5384343
@@ -55585,7 +55902,9 @@ It is a work in progress.
 
 Parameters planned for management:
 
+
 ~~~~
+
 Read-write
 Depth
 ImagingMode
@@ -55608,7 +55927,9 @@ FanRadiusStartPixel
 FanRadiusStopPixel
 Encoding
 
+
 ~~~~
+
 
 
 To accomplish configuring these from std::in, you could do the following:
@@ -55616,29 +55937,41 @@ To accomplish configuring these from std::in, you could do the following:
 Send following string (example) to std::in
 
 
-~~~~
-<Device><UsImagingParameters><Parameter name='Depth' value='40'/><Parameter name='Gain' value='68'/></UsImagingParameters></Device>
 
 ~~~~
+
+<Device><UsImagingParameters><Parameter name='Depth' value='40'/><Parameter name='Gain' value='68'/></UsImagingParameters></Device>
+
+
+~~~~
+
 
 
 Then, in PlusServer, add std::in handling.
 Use
 
-~~~~
-vtkSmartPointer<vtkXMLDataElement> inputElement = vtkSmartPointer<vtkXMLDataElement>::Take( vtkXMLUtilities::ReadElementFromString(stringFromStdIn.c_str()) );
 
 ~~~~
+
+vtkSmartPointer<vtkXMLDataElement> inputElement = vtkSmartPointer<vtkXMLDataElement>::Take( vtkXMLUtilities::ReadElementFromString(stringFromStdIn.c_str()) );
+
+
+~~~~
+
 
 to convert from string to XML structure.
 
 Then, create a new us imaging parameter via
 
+
 ~~~~
+
 vtkSmartPointer<vtkUsImagingParameters> imgParam = vtkSmartPointer<vtkUsImagingParameters>::New();
 imgParam ->ReadConfiguration(inputElement)
 
+
 ~~~~
+
 
 
 Then, you'll have to find the device you wish to apply it to.
@@ -55649,14 +55982,18 @@ How you identify the server, device and channel is up to you. Perhaps parameters
 Once it is implemented, you will be able to call:
 
 
+
 ~~~~
+
 vtkPlusUsDevice* usDevice = vtkPlusUsDevice::SafeDown(device);
 if( usDevice != NULL )
 {
   usDevice->SetNewImagingParametersDevice(imgParam);
 }
 
+
 ~~~~
+
 
 
 However, the class vtkPlusUsDevice is not implemented yet.
@@ -55679,7 +56016,9 @@ Parameters planned for"
 For now, you could do
 
 
+
 ~~~~
+
 
 vtkCapistranoVideoSource* usDevice = vtkCapistranoVideoSource::SafeDownCast(device)
 if( usDevice != NULL )
@@ -55687,7 +56026,9 @@ if( usDevice != NULL )
   usDevice->SetUsImagingParametersDevice(imgParam);
 }
 
+
 ~~~~
+
 
 
 #### 2016-01-19, 22:38:11 - Hyun Jae Kang
@@ -56638,7 +56979,9 @@ status: changed from "Accepted" to "New"
 Yes, exactly. I have already implemented a solution. I have added a new data source type (and surrounding infrastructure). The config file I am testing with looks like this:
 
 
+
 ~~~~
+
 
     <Device
       Id='TextRecognizerDevice' 
@@ -56662,7 +57005,9 @@ Yes, exactly. I have already implemented a solution. I have added a new data sou
       </OutputChannels>
     </Device>
 
+
 ~~~~
+
 
 
 It is working very well. I can add customfields to a frame, and plusserver STRING messages will send a field. We can extend it to send multiple fields in a single frame via another message type if we want (or v3 style messages with metadata)
@@ -57881,7 +58226,9 @@ status: changed from "New" to "Fixed"
 ## #1093 Build fails due to OpenIGTLink misconfiguration
 I guess that ${OpenIGTLink_LIBRARY_TARGETS_FILE} ends up being empty. The error message:
 
+
 ~~~~
+
 11>  Performing configure step for 'PlusApp'
 11>  CMake Error at C:/Dev/plus/shared2013/Deps/OpenIGTLink-bin/UseOpenIGTLink.cmake:21 (include):
 11>    include called with wrong number of arguments.  include() only takes one
@@ -57890,7 +58237,9 @@ I guess that ${OpenIGTLink_LIBRARY_TARGETS_FILE} ends up being empty. The error 
 11>    C:/Dev/plus/shared2013/PlusLib-bin/UsePlusLib.cmake:51 (INCLUDE)
 11>    CMakeLists.txt:19 (INCLUDE)
 
+
 ~~~~
+
 
 The only difference from default configuration is usage of VTK7 instead of 6.2. SVN revision 4722.
 
@@ -57962,7 +58311,9 @@ Investigating.
 #### 2016-07-12, 16:34:24 - Dzenan Zukic
 VS2015 gives me the same error:
 
+
 ~~~~
+
 12>  CMake Error at C:/Dev/plus-2015/Deps/OpenIGTLink-bin/UseOpenIGTLink.cmake:21 (include):
 12>    include called with wrong number of arguments.  include() only takes one
 12>    file.
@@ -57975,7 +58326,9 @@ VS2015 gives me the same error:
 12>  -- Found Subversion: C:/Program Files/TortoiseSVN/bin/svn.exe (found version '1.9.0')
 12>  -- Current revision is 4722
 
+
 ~~~~
+
 
 
 #### 2016-07-12, 16:39:46 - Adam Rankin
@@ -58018,7 +58371,9 @@ Aka vs2013 qt install when generating Visual Studio 2015
 #### 2016-07-12, 20:56:22 - Dzenan Zukic
 There are a lot of errors in that case, here is only 44 errors. And if I try building only VTK, here is what I get (boils down to 6 unresolved externals):
 
+
 ~~~~
+
 1>------ Build started: Project: vtkhdf5, Configuration: Release x64 ------
 1>  vtkhdf5.vcxproj -> C:\\Dev\\plus-2015\\bin\elease\\vtkhdf5-7.0.dll
 2>------ Build started: Project: vtkGUISupportQt, Configuration: Release x64 ------
@@ -58049,7 +58404,9 @@ There are a lot of errors in that case, here is only 44 errors. And if I try bui
 7>Project not selected to build for this solution configuration 
 ========== Build: 2 succeeded, 3 failed, 114 up-to-date, 2 skipped ==========
 
+
 ~~~~
+
 
 
 #### 2016-07-12, 21:05:26 - Andras Lasso
@@ -58120,7 +58477,9 @@ The default configuration of revision 4740 failed due to Qt5WebKitWidgets. I am 
 #### 2016-07-18, 14:27:03 - Dzenan Zukic
 The build still fails with the same error
 
+
 ~~~~
+
 11>  At revision 4740.
 11>  No patch step for 'PlusApp'
 11>  Performing configure step for 'PlusApp'
@@ -58131,7 +58490,9 @@ The build still fails with the same error
 11>    C:/Dev/plus-2013/PlusLib-bin/UsePlusLib.cmake:51 (INCLUDE)
 11>    CMakeLists.txt:15 (INCLUDE)
 
+
 ~~~~
+
 
 OpenIGTLink_LIBRARY_TARGETS_FILE variable is empty. So either UseOpenIGTLink.cmake needs to include OpenIGTLinkConfig.cmake which sets OpenIGTLink_LIBRARY_TARGETS_FILE, or UsePlusLib.cmake needs to do it.
 
@@ -58259,11 +58620,15 @@ I have confirmed that the 'b' parameter is ignored.
 
 vtk/ThirdParty/zlib/vtkzlib/gzlib.c
 
+
 ~~~~
+
 case 'b':       /* ignore -- will request binary anyway */
 break;
 
+
 ~~~~
+
 
 
 I will investigate if this is a platform specific behavior.
@@ -58293,11 +58658,15 @@ http://crunch.cs.queensu.ca/CDash/viewConfigure.php?buildid=54006
 In the file you linked to, it still has the same code block:
 
 
+
 ~~~~
+
 case 'b':       /* ignore -- will request binary anyway */
  break;
 
+
 ~~~~
+
 
 
 #### 2016-07-18, 16:13:53 - Adam Rankin
@@ -60360,7 +60729,9 @@ status: changed from "New" to "Test"
 ## #1140 Build problems
 OpenIGTLinkIO must be enabled in PlusBuild, otherwise PlusLib can't be configured:
 
+
 ~~~~
+
 CMake Error at src/CMakeLists.txt:26 (FIND_PACKAGE):
   Could not find a package configuration file provided by 'OpenIGTLinkIO'
   with any of the following names:
@@ -60372,15 +60743,21 @@ CMake Error at src/CMakeLists.txt:26 (FIND_PACKAGE):
   'OpenIGTLinkIO_DIR' to a directory containing one of the above files.  If
   'OpenIGTLinkIO' provides a separate development package or SDK, be sure it
   has been installed.
+
 ~~~~
+
 
 
 When it is turned on I run into this issue:
 
+
 ~~~~
+
 CMake Error at src/Utilities/MfVideoCaptureLibrary/CMakeLists.txt:46 (MESSAGE):
   Library not found in Windows SDK: Evr
+
 ~~~~
+
  But this might be related to my compiler setup (installed VS2017RC then uninstalled it). Manually changing WINDOWS_SDK_LIBRARY_DIRS and WINDOWS_SDK_INCLUDE_DIRS from *C:/Program Files (x86)/Windows Kits/10/lib/10.0.10240.0/ucrt/x64* to *C:/Program Files (x86)/Windows Kits/8.1/Lib/winv6.3/um/x64* solves this.
 
 #### 2017-01-11, 18:50:57 - Dzenan Zukic
@@ -60416,11 +60793,15 @@ status: changed from "Test" to "Fixed"
 #### 2017-01-12, 01:02:49 - Dzenan Zukic
 I was too quick to close this. The include directories for OpenIGTLinkIO are not set up at all:
 
+
 ~~~~
+
 3>C:\\Dev\\plus\\bin64-2015\\PlusLib\\src\\PlusServer\\vtkPlusOpenIGTLinkServer.cxx(40): fatal error C1083: Cannot open include file: 'igtlPolyDataConverter.h': No such file or directory
 10>LINK : fatal error LNK1104: cannot open file 'igtlioConverter.lib'
 
+
 ~~~~
+
 
 
 #### 2017-01-12, 01:02:49 - Dzenan Zukic
@@ -60527,11 +60908,15 @@ Commit: url:https://github.com/PlusToolkit/PlusLib/commit/4807279db0467d2e0fa029
 ## #1143 Enabling MMF causes CMake configure error
 This is a bug introduced recently. FindWindowsSDK no longer works correctly.
 
+
 ~~~~
+
 CMake Error at src/Utilities/MfVideoCaptureLibrary/CMakeLists.txt:46 (MESSAGE):
   Library not found in Windows SDK: Evr
 
+
 ~~~~
+
 
 This has been happening to me for a few days, and now a second person is experiencing this.
 
@@ -60555,12 +60940,16 @@ But file *evr.lib* exists only in following versions: v7.1A, 8.0 and 8.1.
 #### 2017-01-16, 20:45:12 - Dzenan Zukic
 When using Configure in PlusBuild, I get the following output in the CMake log:
 
+
 ~~~~
+
 FindWindowsSDK: Detected Visual Studio 2012 or newer, not using the _xp toolset variant: including SDK versions that drop XP support in search!
 Checking if the latest Windows SDK is compatible (C:/Program Files (x86)/Windows Kits/10)
 Checking if the latest Windows SDK is compatible -- yes
 
+
 ~~~~
+
 
 And this version does not have *evr.lib* and other libraries required by MMF.
 
@@ -60597,7 +60986,9 @@ Even with the newest commit, the same SDK is found. This is true even if I repla
 #### 2017-01-16, 22:41:54 - Dzenan Zukic
 The reason for the error is that TestWindowsSDK is not finding/using the absolute path to those libraries (evr.lib etc), but MfVideoCaptureLibrary is. With the relevant part of *PlusLib\\src\\Utilities\\MfVideoCaptureLibrary\\CMakeLists.txt* modified like this:
 
+
 ~~~~
+
 SET (MfVideoCaptureLibraryLibNames
   Evr
   Mf
@@ -60619,7 +61010,9 @@ SET (MfVideoCaptureLibraryLibNames
 # endforeach()
 set(MfVideoCaptureLibrary_LIBS ${MfVideoCaptureLibraryLibNames})
 
+
 ~~~~
+
 
 the project configures and builds successfully.
 
@@ -60655,7 +61048,9 @@ Building in 32-bit mode with Interson and Capistrano enabled produces the below 
 I can notice a few obvious problems: ToolStateDisplayWidgetTest always uses x64 thus causing conflicts with 32-bit Qt. vtkImageViewer class is no longer available to data collection tests, probably due to superbuild configuration of VTK. And latest cleanup of vtkPlusVirtualDiscCapture was not entirely thorough.
 
 
+
 ~~~~
+
 Error  630  error LNK1112: module machine type 'x64' conflicts with target machine type 'X86' [C:\\Dev\\plus\\bin32-2013-new\\PlusLib-bin\\src\\PlusWidgets\  esting\  oolStateDisplayWidgetTest.vcxproj]  C:\\Dev\\plus\\bin32-2013-new\\Qt5Cored.lib(Qt5Cored.dll)
 Error  631  error LNK2019: unresolved external symbol 'public: static class vtkImageViewer * __cdecl vtkImageViewer::New(void)' (?New@vtkImageViewer@@SAPAV1@XZ) referenced in function 'public: static class vtkSmartPointer<class vtkImageViewer> __cdecl vtkSmartPointer<class vtkImageViewer>::New(void)' (?New@?$vtkSmartPointer@VvtkImageViewer@@@@SA?AV1@XZ) [C:\\Dev\\plus\\bin32-2013-new\\PlusLib-bin\\src\\PlusDataCollection\  esting\\vtkCapistranoVideoSourceTest.vcxproj]  C:\\Dev\\plus\\bin32-2013-new\\vtkCapistranoVideoSourceTest.obj
 Error  632  error LNK2019: unresolved external symbol 'public: void __thiscall vtkImageViewer::SetupInteractor(class vtkRenderWindowInteractor *)' (?SetupInteractor@vtkImageViewer@@QAEXPAVvtkRenderWindowInteractor@@@Z) referenced in function _main [C:\\Dev\\plus\\bin32-2013-new\\PlusLib-bin\\src\\PlusDataCollection\  esting\\vtkCapistranoVideoSourceTest.vcxproj]  C:\\Dev\\plus\\bin32-2013-new\\vtkCapistranoVideoSourceTest.obj
@@ -60680,7 +61075,9 @@ Error  655  error C1083: Cannot open include file: 'vtkPlusVirtualDiscCapture.h'
 Error  656  error C1083: Cannot open include file: 'vtkPlusVirtualDiscCapture.h': No such file or directory [C:\\Dev\\plus\\bin32-2013-new\\PlusApp-bin\\fCal\\fCal.vcxproj]  c:\\dev\\plus\\bin32-2013-new\\PlusApp\\fCal\\PlusCaptureControlWidget.h  15
 
 
+
 ~~~~
+
 
 
 #### 2017-01-18, 00:14:58 - Dzenan Zukic
@@ -60776,10 +61173,14 @@ The above issue likely stems from the inconsistencies with this device and the g
 The issue was in the following lines in url:http://perk-software.cs.queensu.ca/plus/doc/nightly/dev/vtkPlusUSDigitalEncodersTracker_8cxx_source.html#l00385|vtkPlusUSDigitalEncodersTracker, where the encoder position is being saved incorrectly as the output of ::A2GetPosition:
 
 
-~~~~
-Encoder_Value = ::A2GetPosition(encoders.Encoder_Addr, &Encoder_Value);
 
 ~~~~
+
+Encoder_Value = ::A2GetPosition(encoders.Encoder_Addr, &Encoder_Value);
+
+
+~~~~
+
 
 
 #### 2017-01-23, 22:39:03 - jperdomo
@@ -61266,13 +61667,17 @@ To reproduce:
 
 Send a transform that doesn't exist.
 
+
 ~~~~
+
       <TransformNames>
         <Transform Name='StylusToReference'/>
         <Transform Name='StylusTipToStylus'/>
         ...
 
+
 ~~~~
+
 
 
 And observe the sent transforms
@@ -61292,7 +61697,9 @@ status: changed from "New" to "Fixed"
 ## #1155 SetupForDevelopment.sh does not work on Windows
 I want to re-create the pull request for #1148, so I checked out the git repo from url:https://github.com/PlusToolkit/PlusLib/|GitHub and executed this in GitBash:
 
+
 ~~~~
+
 Dzenan@Xeonator MINGW64 /c/Dev/PlusGit/PlusLib (master)
 $ ./Utilities/SetupForDevelopment.sh
 fatal: not in a git directory
@@ -61315,7 +61722,9 @@ On branch master
 Your branch is up-to-date with 'origin/master'.
 nothing to commit, working directory clean
 
+
 ~~~~
+
 
 Running SetupForDevelopment.sh in ITK repository through GitBash works for me.
 
@@ -61382,10 +61791,14 @@ Commit: url:https://github.com/PlusToolkit/PlusApp/commit/17d87b8f37ac2f41cc931a
 ## #1159 VolumeReconstructor ignores OutputExtent and OutputOrigin
 SetOutputExtentFromFrameList is called regardless of whether OutputExtent and OutputOrigin were specified in the configuration file. If this call is skipped manually during debugging, this error occurs:
 
-~~~~
-|ERROR|012.849000| OptimizedInsertSlice: input ScalarType (3)  must match out ScalarType (11)| in C:\\Dev\\plus\\bin64-2015\\PlusLib\\src\\PlusVolumeReconstruction\\vtkPlusPasteSliceIntoVolume.cxx(422)
 
 ~~~~
+
+|ERROR|012.849000| OptimizedInsertSlice: input ScalarType (3)  must match out ScalarType (11)| in C:\\Dev\\plus\\bin64-2015\\PlusLib\\src\\PlusVolumeReconstruction\\vtkPlusPasteSliceIntoVolume.cxx(422)
+
+
+~~~~
+
 
 This prevents setting custom output extent to skip unwanted part of volume from being reconstructed, e.g. for quicker debugging (breakpoints with conditions slow down execution speed excruciatingly).
 
@@ -61398,28 +61811,38 @@ Can you describe what class you are referring to? We specify custom output origi
 #### 2017-05-11, 14:46:02 - Dzenan Zukic
 I am talking about volume reconstructor executable, which in turn invokes vtkPlusVolumeReconstructor. VolumeReconstructor.cxx, line 175:
 
-~~~~
-if (reconstructor->SetOutputExtentFromFrameList(trackedFrameList, transformRepository, errorDetail) != PLUS_SUCCESS)
 
 ~~~~
+
+if (reconstructor->SetOutputExtentFromFrameList(trackedFrameList, transformRepository, errorDetail) != PLUS_SUCCESS)
+
+
+~~~~
+
 
 obliterates *OutputOrigin* and *OutputExtent* settings provided in <VolumeReconstruction> section of the configuration file.
 
 #### 2017-05-11, 14:46:02 - Dzenan Zukic
 CommentContent: changed from "I am talking about volume reconstructor executable, which in turn invokes vtkPlusVolumeReconstructor. VolumeReconstructor.cxx, line 175 `if (reconstructor->SetOutputExtentFromFrameList(trackedFrameList, transformRepository, errorDetail) != PLUS_SUCCESS)`" to "I am talking about volume reconstructor executable, which in turn invokes vtkPlusVolumeReconstructor. VolumeReconstructor.cxx, line 175:
 
+
 ~~~~
+
 if (reconstructor->SetOutputExtentFromFrameList(trackedFrameList, transformRepository, errorDetail) !="
 
 #### 2017-05-11, 14:54:40 - Andras Lasso
 We usually need the entire volume, but I agree that it could be useful to disable automatic extent setting. If you need this then add a new option:
 
 
+
 ~~~~
+
 cmdargs.AddArgument('--disable-auto-extent', vtksys::CommandLineArguments::NO_ARGUMENT, &disableAutoExtent, 'Do not compute extent from the input sequence file but use OutputOrigin and OutputExtent specified in the configuration file.');
 
 
+
 ~~~~
+
   
 
 #### 2017-05-11, 15:19:27 - Dzenan Zukic
@@ -61942,10 +62365,14 @@ From url:https://app.assembla.com/spaces/plus/messages/5759743|https://app.assem
 
 Git dir should be obtained using 
 
-~~~~
-git rev-parse --git-dir
 
 ~~~~
+
+git rev-parse --git-dir
+
+
+~~~~
+
 
 instead of assuming .git folder
 
@@ -62496,12 +62923,16 @@ Enable better integration with Slicer. When Plus is pointed to ITK and VTK from 
 In Slicer's superbuild ITK's internal zlib is turned off and Slicer-provided 'system' zlib is used. In VTK internal zlib is not built by default, and in Slicer's superbuild VTK is pointed to Slicer-provided 'system' zlib too.
 We therefore need to implement ITK/VTK-like USE_SYSTEM_ZLIB mechanism in Plus. Specifically, use the below CMake defines to enable usage of another zlib build:
 
+
 ~~~~
+
     -DPLUS_USE_SYSTEM_ZLIB:BOOL=ON
     -DZLIB_INCLUDE_DIR:PATH=...
     -DZLIB_LIBRARY:FILEPATH=...
 
+
 ~~~~
+
 
 
 #### 2017-04-27, 13:34:07 - Andras Lasso
@@ -62912,7 +63343,9 @@ Commit: r:5073|plus:5073
 ## #1190 Static build broken
 Trying to compile PlusLib with static libraries causes CMake errors at generate step:
 
+
 ~~~~
+
 Configuring PLUS toolkit version 2.5.0.
 Detected platform: Win64.
 Current git hash is 38e1045f061685ece90d42d035f7ce1854d55a55
@@ -63239,7 +63672,9 @@ CMake Error:
 
 Generating done
 
+
 ~~~~
+
 
 
 #### 2017-05-09, 20:06:27 - Andras Lasso
@@ -63480,7 +63915,9 @@ Commit: url:https://github.com/PlusToolkit/PlusLib/commit/23bb81fe1151d9a1e31f19
 This consistently happens on a laptop with WinProbe ultrasound system. I can't figure out what is wrong. The build log is below. The important error messages are on the first 10 lines or so.
 
 
+
 ~~~~
+
 1>------ Build started: Project: PlusWidgets_autogen, Configuration: Debug x64 ------
 2>------ Build started: Project: ToolStateDisplayWidgetTest_autogen, Configuration: Debug x64 ------
 3>------ Skipped Build: Project: RUN_TESTS, Configuration: Debug x64 ------
@@ -63564,7 +64001,9 @@ etCDF /I'C:\\Users\\WinProbe\\Documents\\Plus64WPa\\Deps\\vtk-bin\\IO\\PLY' /IC:
 11>Project not selected to build for this solution configuration 
 ========== Build: 0 succeeded, 4 failed, 65 up-to-date, 7 skipped ==========
 
+
 ~~~~
+
 
 
 #### 2017-05-15, 23:42:49 - Andras Lasso
@@ -64464,7 +64903,9 @@ assigned_to_id: changed from null to "lassoan"
 I am trying to build the latest master, and run into:
 
 
+
 ~~~~
+
 3>C:\\Dev\\PlusGit\\bin64d\\PlusLib\\src\\PlusOpenIGTLink\\vtkPlusIgtlMessageCommon.cxx(77): error C2039: 'VTKToIGTLTransform': is not a member of 'igtlio::TransformConverter'
 3>  C:\\Dev\\PlusGit\\bin64d\\Deps\\OpenIGTLinkIO\\Converter\\igtlioTransformConverter.h(32): note: see declaration of 'igtlio::TransformConverter'
 ...
@@ -64473,7 +64914,9 @@ I am trying to build the latest master, and run into:
 3>  C:\\Dev\\PlusGit\\bin64d\\Deps\\OpenIGTLinkIO\\Converter\\igtlioPolyDataConverter.h(57): note: see declaration of 'igtlio::PolyDataConverter::VTKPolyDataToIGTL'
 3>  C:\\Dev\\PlusGit\\bin64d\\Deps\\OpenIGTLinkIO\\Converter\\igtlioPolyDataConverter.h(33): note: see declaration of 'igtlio::PolyDataConverter'
 
+
 ~~~~
+
 
 
 @rankin You modified this file about 10 days ago.
@@ -64970,7 +65413,9 @@ I am using the standard configuration file that is distributed with the download
 
 Error log:
 
+
 ~~~~
+
 
 |INFO|000.042000| Software version: Plus-2.5.0.dbb84f3 - Win32| in D:\\D\\PTNPIMT37b\\PlusApp\\PlusServerLauncher\\PlusServerLauncherMainWindow.cxx(106)
 |INFO|000.042000| Logging at level 3 to file: C:/Users/mholden8/PlusApp-2.5.0.20170722-Interson-MTC-3.7-Win32/data/080817_150945_PlusLog.txt| in D:\\D\\PTNPIMT37b\\PlusApp\\PlusServerLauncher\\PlusServerLauncherMainWindow.cxx(107)
@@ -64995,7 +65440,9 @@ Error log:
 |ERROR|018.743000| Server stopped unexpectedly. Return code: -1073741819| in D:\\D\\PTNPIMT37b\\PlusApp\\PlusServerLauncher\\PlusServerLauncherMainWindow.cxx(488)
 |INFO|018.743000| Disconnect request successful| in D:\\D\\PTNPIMT37b\\PlusApp\\PlusServerLauncher\\PlusServerLauncherMainWindow.cxx(311)
 
+
 ~~~~
+
 
 
 
@@ -65120,13 +65567,17 @@ status: changed from "Test" to "Fixed"
 Investigate:
 
 
+
 ~~~~
+
 080917_135857.468|DEBUG|000.560000| NDI Command:COMM:50000| in D:\\D\\PTNPS61b\\PlusLib\\src\\PlusDataCollection\
 DICAPITracking\\vtkPlusNDITracker.cxx(233)
 080917_135857.503|ERROR|000.595000| Invalid CRC calculated for command| in D:\\D\\PTNPS61b\\PlusLib\\src\\PlusDataCollection\
 DICAPITracking\\vtkPlusNDITracker.cxx(332)
 
+
 ~~~~
+
 
 
 #### 2017-08-09, 21:15:50 - Adam Rankin
