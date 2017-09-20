@@ -16843,9 +16843,12 @@ status: changed from "New" to "Invalid"
 
 ## #390 ProbeCalibrationAlgo: save spatial calibration result
 Save spatial calibration result to 
+
+~~~~
 <CoordinateFrameDefinitions>
       <Transform From='Image' To='Probe' Matrix='1 0 0 0  0 1 0 0  0 0 1 0 0 0 0 1' Error='0.0' />
 <CoordinateFrameDefinitions>
+~~~~
 
 
 #### 2011-11-23, 19:32:23 - Tamas Heffter
@@ -16869,9 +16872,12 @@ status: changed from "Accepted" to "Fixed"
 
 ## #391 PivotCalibrationAlgo: read and write calibration result to xml 
 PivotCalibrationAlgo: read and write calibration result to xml under the <CoordinateFrameDefinitions> xml data element
+
+~~~~
 <CoordinateFrameDefinitions>
       <Transform From='Stylus' To='ToolTip' Matrix='1 0 0 0  0 1 0 0  0 0 1 0 0 0 0 1' Error='0.0' />
 <CoordinateFrameDefinitions>
+~~~~
 
 
 
@@ -32810,7 +32816,7 @@ EVENT:CROSS_HAIR_OUTSIDE_IMAGE; Message sent when a cross hair or some of its
 parts is placed outside of the shown ultrasound 
 image.
 EVENT:OEM_SYNCHRONIZATION; Message sent when the user-programmable key 
-<OEM Synchronization> is pressed on the 
+&lt;OEM Synchronization&gt; is pressed on the 
 scanner.
 
 #### 2013-02-16, 01:07:38 - Andras Lasso
@@ -33033,6 +33039,7 @@ Both :) But in this case I was talking about reconstruction from NDI only, the s
 
 We used NDI Polaris tracker that came with a Hologic US/CT fusion system.
 
+~~~~
    <Device
       Id='TrackerDevice'
       Type='PolarisTracker'
@@ -33040,6 +33047,7 @@ We used NDI Polaris tracker that came with a Hologic US/CT fusion system.
       BaudRate='115200'
       AcquisitionRate='50'
       LocalTimeOffsetSec='0'>
+~~~~
 
 > With active or passive markers?
 
