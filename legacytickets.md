@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Legacy Assembla Tickets
-description: ""
+description: "Archive of Plus Assembla tickets"
 ---
 
 ## #1 Option to manually input synchronization value.
