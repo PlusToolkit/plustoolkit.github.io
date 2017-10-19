@@ -115,8 +115,8 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
-			<td>N</td>
-			<td>N</td>
+			<td>Y</td>
+			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
 			<td>N</td>
