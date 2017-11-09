@@ -36,7 +36,22 @@ Supported platforms:
 - Windows 7 32-bit/64-bit, Windows 10 32-bit/64-bit, Windows XP 32-bit embedded, Ubuntu 16.04, and MacOSX operating systems are fully supported and regularly tested.
 - Running on Linux and MacOS: Unfortunately, many of the drivers written for devices are Windows specific, and thus capture cannot be done on a Linux or MacOSX machine. It is recommended to do the data acquisition on Windows and stream the acquired data to the Linux or MacOS computer for further processing.
 
-Contribute
+Contributing
 ----------
 
 We follow the standard [GitHub Flow](https://guides.github.com/introduction/flow/) process. In short: send a pull request with proposed changes. See more information [here](https://github.com/PlusToolkit/PlusBuild/blob/master/CONTRIBUTING.md).
+
+When making code changes, please follow Plus coding conventions. The Astyle formatter can be used to quickly format a file to Plus standards.
+* PLUS format:
+  * --style=allman
+  * --indent=spaces=2
+  * --align-pointer=type
+  * --indent-namespaces
+  * --indent-col1-comments
+  * --pad-oper
+  * --unpad-paren
+  * --add-brackets
+  * --add-one-line-brackets
+  * --keep-one-line-blocks
+  * --convert-tabs
+  * --mode=c
