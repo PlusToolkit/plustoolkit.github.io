@@ -15,10 +15,11 @@ Plus toolkit contains three main repositories:
 - [PlusApp](https://github.com/PlusToolkit/PlusApp/): Software applications with graphical user interface that use PlusLib to make features available to end users.
 - [PlusBuild](https://github.com/PlusToolkit/PlusBuild/): Small project that downloads and builds PlusLib, PlusApp and all their dependencies (VTK, ITK, etc.).
 
-API documentation
+Documentation
 -----------------
 
 - <a href="http://perk-software.cs.queensu.ca/plus/doc/nightly/dev/">PlusLib API documentation</a>: generated nightly from the latest code version.
+- [Plus devices](https://github.com/PlusToolkit/PlusBuild/blob/master/devicecode.md): description of the steps requires to implement a new device interface.
 
 Testing dashboards
 ------------------
@@ -55,3 +56,4 @@ When making code changes, please follow Plus coding conventions. The Astyle form
   * --keep-one-line-blocks
   * --convert-tabs
   * --mode=c
+
