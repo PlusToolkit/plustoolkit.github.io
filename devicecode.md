@@ -241,6 +241,6 @@ Documentation of your device is critical in order for other users to understand 
 * Please create and complete the following file (use an existing device file as a template):
   * `<PlusLib>\src\Documentation\UserManual\DeviceYourDeviceName.dox`
 * Add an entry to your device page in `<PlusApp>\Documentation\Configuration.dox`
-  * `- \subpage DeviceYourDeviceName
+  * `- \subpage DeviceYourDeviceName`
 
 The Plus documentation build will include your page in the user manual generated nightly.
