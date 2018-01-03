@@ -19,7 +19,7 @@ Documentation
 -----------------
 
 - <a href="http://perk-software.cs.queensu.ca/plus/doc/nightly/dev/">PlusLib API documentation</a>: generated nightly from the latest code version.
-- [Plus devices](https://github.com/PlusToolkit/PlusBuild/blob/master/devicecode.md): description of the steps requires to implement a new device interface.
+- [Plus devices](devicecode.md): description of the steps requires to implement a new device interface.
 
 Testing dashboards
 ------------------
