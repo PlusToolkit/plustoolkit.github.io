@@ -230,6 +230,18 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>N</td>
 			<td>N</td>
 		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px;">Intel RealSense</td>
+			<td>Y</td>
+			<td>Y</td>
+			<td>Y</td>
+			<td>N</td>
+			<td>N</td>
+			<td>Y</td>
+			<td>Y</td>
+			<td>Y</td>
+			<td>Y</td>
+		</tr>
 	</tbody>
 </table>
 
