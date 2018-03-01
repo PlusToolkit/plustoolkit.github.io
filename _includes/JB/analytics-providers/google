@@ -5,7 +5,9 @@
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-ga('create', '{{ site.JB.analytics.google.tracking_id }}', 'auto');
+ga('create', '{{ site.JB.analytics.google.tracking_id }}', 'auto', {'allowLinker': true});
+ga('require', 'linker');
+ga('linker:autoLink', ['perk-software.cs.queensu.ca']);
 ga('send', 'pageview');
 
 </script>
