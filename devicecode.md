@@ -73,17 +73,20 @@ There are a few steps required to add the device to the project.
 * In the root `CMakeLists.txt` of the [PlusBuild](https://github.com/PlusToolkit/PlusBuild) repository, add an option for the device.
   * Example: `OPTION(PLUS_USE_YourDeviceName "Provide support for <your device description>" OFF)`
 * If necessary, add an include of any external SDKs necessary for your device
+
 ``` cmake
 IF(PLUS_USE_YourDeviceName)
   INCLUDE(SuperBuild/External_DeviceSDK.cmake)
 ENDIF()
 ```
+
 * Add it as a dependency to the PlusLib project (this ensures correct build order in PlusBuild)
 ``` cmake
 IF(PLUS_USE_YourDeviceName AND NOT <externalSDK>_DIR)
   LIST(APPEND PlusLib_DEPENDENCIES <externalSDK>)
 ENDIF()
 ```
+
 ### PlusLib
 * In `<PlusLib>\src\PlusConfigure.h.in`, add the following
   * `#cmakedefine PLUS_USE_YourDeviceName`
@@ -92,6 +95,7 @@ ENDIF()
 * In `<PlusLib>\src\PlusDataCollection\CMakeLists.txt`, add the following
   * Replicate the device option: `OPTION(PLUS_USE_YourDeviceName "Provide support for <your device description>" OFF)`
   * Add the section to include your C++ code and dependencies:
+  
 ```
 # --------------------------------------------------------------------------
 # YourDevice
@@ -128,6 +132,7 @@ ENDIF()
 
 #### Testing
 * In `<PlusLib>\src\PlusDataCollection\Testing\CMakeLists.txt`, add the following
+
 ``` cmake
 #*************************** YourDeviceNameTest1 ***************************
 ADD_EXECUTABLE(YourDeviceNameTest1 YourDeviceNameTest.cxx)
@@ -206,6 +211,7 @@ These functions would be typically called once per `InternalUpdate` or callback.
 All configuration of a device is performed via an XML configuration file provided to a Plus program. Like other steps, it is highly recommended that you reference an existing device for examples of how to make your device configurable. Device parameters are read and written `YourDevice::ReadConfiguration` and `YourDevice::WriteConfiguration`.
 
 Two example devices are shown below. One connects to hardware, and the other is a virtual (software) device that acts on input from other device output.
+
 ``` xml
 <Device
   Id="VideoDevice"
