@@ -14,6 +14,7 @@ If an API is in a public repository, and is "CMake-ified", you can add it as an 
 * Add a file (where ExternalSDK is the name of the SDK, for example, `External_OpenCV`)
   * `<PlusBuild>\SuperBuild\External_DeviceSDK.cmake`
 * In that file, add the following contents, customized to your SDK
+
 ``` cmake
 IF(<externalSDK>_DIR)
   # <externalSDK> has been built already
@@ -81,6 +82,7 @@ ENDIF()
 ```
 
 * Add it as a dependency to the PlusLib project (this ensures correct build order in PlusBuild)
+
 ``` cmake
 IF(PLUS_USE_YourDeviceName AND NOT <externalSDK>_DIR)
   LIST(APPEND PlusLib_DEPENDENCIES <externalSDK>)
