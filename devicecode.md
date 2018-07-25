@@ -73,6 +73,8 @@ There are a few steps required to add the device to the project.
 ### PlusBuild
 * In the root `CMakeLists.txt` of the [PlusBuild](https://github.com/PlusToolkit/PlusBuild) repository, add an option for the device.
   * Example: `OPTION(PLUS_USE_YourDeviceName "Provide support for <your device description>" OFF)`
+* In the `<PlusBuild>\Superbuild\External_PlusLib.cmake` file, add a line to the end of the `ExternalProject_Add(PlusLib ...` command to pass your device option to the PlusLib project
+  * Example: `-DPLUS_USE_YourDeviceName:BOOL=${PLUS_USE_YourDeviceName}`
 * If necessary, add an include of any external SDKs necessary for your device
 
 ``` cmake
