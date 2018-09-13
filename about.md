@@ -17,9 +17,23 @@ Acknowledgements
 ----------------
 
 Development of the Plus library is funded, in part, by the following sources:
-- Cancer Care Ontario by funding an Applied Cancer Research Unit (2011-2016), PI: Gabor Fichtinger, PerkLab, Queen's University
-- CANARIE’s Research Software Program (2017-2020), PI: Gabor Fichtinger, PerkLab, Queen's University
-- NIH/NIBIB and NIH/NIGMS via grant 1R01EB021396-01A1 - Slicer+PLUS: Point-of-Care Ultrasound (2017-2019), PI: Stephen Aylward, Kitware
+
+<table>
+  <tbody>
+    <tr>
+      <td> CANARIE’s Research Software Program (2017-2020), PI: Gabor Fichtinger, PerkLab, Queen's University </td>
+      <td> <img src="{{ site.url }}/assets/images/CANARIE.jpg" /> </td>
+    </tr>
+    <tr>
+      <td> NIH/NIBIB and NIH/NIGMS via grant 1R01EB021396-01A1 - Slicer+PLUS: Point-of-Care Ultrasound (2017-2019), PI: Stephen Aylward, Kitware </td>
+      <td> <img src="{{ site.url }}/assets/images/NIH_Logo.gif" /> </td>
+    </tr>
+    <tr>
+      <td> Cancer Care Ontario by funding an Applied Cancer Research Unit (2011-2016), PI: Gabor Fichtinger, PerkLab, Queen's University </td>
+      <td> <img src="{{ site.url }}/assets/images/LogoCcoSmall.png" /> </td>
+    </tr>
+  </tbody>
+</table>
 
 Contributors
 ------------
