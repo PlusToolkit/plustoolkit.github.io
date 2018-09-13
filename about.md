@@ -21,7 +21,7 @@ Development of the Plus library is funded, in part, by the following sources:
 <table>
   <tbody>
     <tr>
-      <td> CANARIE’s Research Software Program (2017-2020), PI: Gabor Fichtinger, PerkLab, Queen's University </td>
+      <td> CANARIE’s Research Software Program / RS-214 (2017-2020), PI: Gabor Fichtinger, PerkLab, Queen's University </td>
       <td> <img src="{{ site.url }}/assets/images/CANARIE.jpg" /> </td>
     </tr>
     <tr>
