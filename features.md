@@ -14,7 +14,7 @@ Highlights
   <tbody>
     <tr>
       <td style="text-align: center;"> <img src="{{ site.url }}/assets/images/Trackers.png" /><br />
-        Position data acquisition from various devices, including electromagnetic trackers (Ascension, NDI Aurora) and optical trackers (NDI Polaris and Certus, Claron MicronTracker)
+        Position data acquisition from various devices, including electromagnetic trackers (Ascension, NDI Aurora) and optical trackers (OptiTrack, NDI Polaris and Certus, Claron MicronTracker)
       </td>
       <td style="text-align: center;"> <img src="{{ site.url }}/assets/images/NavSystems.png" /><br />
         Data acquisition from commercial surgical navigation systems: Medtronic StealthStation navigation system (receives tracking data and planning volume), BrainLab navigation system (receives tracking data, planning volume, and landmarks; through OpenIGTLink)
