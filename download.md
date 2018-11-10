@@ -145,22 +145,22 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">Ultrasonix (5.7)</td>
-			<td>Y</td>
 			<td>N</td>
-			<td>Y</td>
-			<td>Y</td>
+			<td>N</td>
 			<td>N</td>
 			<td>Y</td>
 			<td>N</td>
-			<td>Y</td>
-			<td>Y</td>
+			<td>N</td>
+			<td>N</td>
+			<td>N</td>
+			<td>N</td>
 			<td>N</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">Ultrasonix (6.1)</td>
 			<td>Y</td>
 			<td>N</td>
-			<td>Y</td>
+			<td>N</td>
 			<td>N</td>
 			<td>Y</td>
 			<td>N</td>
