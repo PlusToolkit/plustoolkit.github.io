@@ -27,6 +27,7 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 - PlusApp-...-**Telemed-Win32**: Package to be used for connecting to Telemed Ultrasound systems on 32/64-bit, Windows 7 and Windows 8 systems. Executables are 32-bit applications.
 - PlusApp-...-**BK-Win32**: Package to be used for connecting to BK Ultrasound systems on 32/64-bit, Windows 7 and Windows 8 systems. Requires BK OEM interface license. Package is available on request.
 - PlusApp-...-**StealthLink-Win32**: Package to be used for connecting to Medtronic navigation systems through StealthLink interface on 32/64-bit, Windows 7 and Windows 8 systems. Requires StealthLink license. Package is available on request.
+- PlusApp-...-**OptiTrack-Telemed-Win32**: Package to be used for connecting to Telemed Ultrasound systems and to OptiTrack using Motive 2.0 on 32/64-bit, Windows 7 and Windows 8 systems. Executables are 32-bit applications.
 - Mac OS X and Linux packages can be built with limited hardware device support. Post a message on the message board if help is needed.
 
 **Supported devices in latest development snapshots**
@@ -61,9 +62,12 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td style="width: 139px;">ThorLabs<br />
 			Win32</td>
 			<td style="width: 128px;">StealthLink</td>
+			<td style="width: 99px;">OptiTrack-Telemed<br />
+			Win32</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">NDI Polaris &amp; Aurora</td>
+			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
@@ -85,11 +89,13 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
+			<td>Y</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">NDI Certus</td>
 			<td>Y</td>
 			<td>N</td>
+			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
@@ -109,6 +115,7 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>Y</td>
 			<td>N</td>
 			<td>Y</td>
+			<td>Y</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">OpticalMarkerTracker</td>
@@ -120,6 +127,7 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>Y</td>
 			<td>Y</td>
 			<td>N</td>
+			<td>Y</td>
 			<td>Y</td>
 		</tr>
 		<tr height="20">
@@ -133,6 +141,7 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>N</td>
 			<td>N</td>
 			<td>Y</td>
+			<td>N</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">Ultrasonix (5.7)</td>
@@ -145,6 +154,7 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>N</td>
 			<td>Y</td>
 			<td>Y</td>
+			<td>N</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">Ultrasonix (6.1)</td>
@@ -157,6 +167,7 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>N</td>
 			<td>Y</td>
 			<td>Y</td>
+			<td>N</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">Telemed</td>
@@ -169,6 +180,7 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>N</td>
 			<td>N</td>
 			<td>Y</td>
+			<td>Y</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">Interson</td>
@@ -179,6 +191,7 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>N</td>
 			<td>N</td>
 			<td>Y</td>
+			<td>N</td>
 			<td>N</td>
 			<td>N</td>
 		</tr>
@@ -193,11 +206,13 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>Y</td>
 			<td>N</td>
 			<td>Y</td>
+			<td>Y</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">Brachy steppers</td>
 			<td>Y</td>
 			<td>N</td>
+			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
@@ -217,17 +232,19 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>N</td>
 			<td>Y</td>
 			<td>N</td>
+			<td>N</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">OptiTrack</td>
-			<td>Y</td>
-			<td>Y</td>
-			<td>Y</td>
 			<td>N</td>
 			<td>N</td>
-			<td>Y</td>
-			<td>Y</td>
-			<td>Y</td>
+			<td>N</td>
+			<td>N</td>
+			<td>N</td>
+			<td>N</td>
+			<td>N</td>
+			<td>N</td>
+			<td>N</td>
 			<td>Y</td>
 		</tr>
 		<tr height="20">
@@ -241,6 +258,7 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>Y</td>
 			<td>Y</td>
 			<td>N</td>
+			<td>Y</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">BK Ultrasound</td>
@@ -252,6 +270,7 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
+			<td>N</td>
 			<td>Y</td>
 		</tr>
 	</tbody>
