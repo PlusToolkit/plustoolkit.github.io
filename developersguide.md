@@ -47,13 +47,13 @@ When making code changes, please follow Plus coding conventions. The Astyle form
   * --style=allman
   * --indent=spaces=2
   * --align-pointer=type
+  * --indent-switches
+  * --indent-cases
   * --indent-namespaces
+  * --indent-preproc-block
   * --indent-col1-comments
   * --pad-oper
   * --unpad-paren
   * --add-brackets
-  * --add-one-line-brackets
-  * --keep-one-line-blocks
   * --convert-tabs
   * --mode=c
-
