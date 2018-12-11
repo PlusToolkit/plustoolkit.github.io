@@ -20,6 +20,7 @@ Documentation
 
 - <a href="http://perk-software.cs.queensu.ca/plus/doc/nightly/dev/">PlusLib API documentation</a>: generated nightly from the latest code version.
 - [Plus devices](devicecode.md): description of the steps requires to implement a new device interface.
+- Notepad++ log file syntax highlighting is available via [this user-defined language](files/PlusLog_NotepadPP_Language.xml).
 
 Testing dashboards
 ------------------
