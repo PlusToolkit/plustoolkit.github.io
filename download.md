@@ -252,7 +252,7 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>N</td>
 		</tr>
 		<tr height="20">
-			<td height="20" style="height: 20px;">OptiTrack</br>(Motive 1.10.3)</td>
+			<td height="20" style="height: 20px;">OptiTrack<br />(Motive 1.10.3)</td>
 			<td>Y</td>
 			<td>N</td>
 			<td>Y</td>
@@ -266,7 +266,7 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>N</td>
 		</tr>
 		<tr height="20">
-			<td height="20" style="height: 20px;">OptiTrack</br>(Motive 2.1.1)</td>
+			<td height="20" style="height: 20px;">OptiTrack<br />(Motive 2.1.1)</td>
 			<td>N</td>
 			<td>Y</td>
 			<td>N</td>
