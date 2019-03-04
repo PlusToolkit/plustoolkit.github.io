@@ -64,8 +64,6 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td style="width: 139px;">ThorLabs<br />
 			Win32</td>
 			<td style="width: 128px;">StealthLink</td>
-			<td style="width: 99px;">OptiTrack-Telemed<br />
-			Win32</td>
 			<td style="width: 99px;">spryTrack-Telemed<br />
 			Win32</td>
 			<td style="width: 99px;">fusionTrack<br />
@@ -73,7 +71,6 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">NDI Polaris &amp; Aurora</td>
-			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
@@ -98,14 +95,12 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
-			<td>Y</td>
 			<td>N</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">NDI Certus</td>
 			<td>Y</td>
 			<td>N</td>
-			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
@@ -128,7 +123,6 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>N</td>
 			<td>Y</td>
 			<td>Y</td>
-			<td>Y</td>
 			<td>N</td>
 		</tr>
 		<tr height="20">
@@ -141,7 +135,6 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>Y</td>
 			<td>Y</td>
 			<td>N</td>
-			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
@@ -159,7 +152,6 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>Y</td>
 			<td>N</td>
 			<td>N</td>
-			<td>N</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">Ultrasonix (5.7)</td>
@@ -167,7 +159,6 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>N</td>
 			<td>N</td>
 			<td>Y</td>
-			<td>N</td>
 			<td>N</td>
 			<td>N</td>
 			<td>N</td>
@@ -189,7 +180,6 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>Y</td>
 			<td>N</td>
 			<td>N</td>
-			<td>N</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">Telemed</td>
@@ -203,7 +193,6 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>N</td>
 			<td>Y</td>
 			<td>Y</td>
-			<td>Y</td>
 			<td>N</td>
 		</tr>
 		<tr height="20">
@@ -215,7 +204,6 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>N</td>
 			<td>N</td>
 			<td>Y</td>
-			<td>N</td>
 			<td>N</td>
 			<td>N</td>
 			<td>N</td>
@@ -234,13 +222,11 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
-			<td>Y</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">Brachy steppers</td>
 			<td>Y</td>
 			<td>N</td>
-			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
@@ -264,11 +250,25 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>N</td>
 			<td>N</td>
 			<td>N</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px;">OptiTrack</br>(Motive 1.10.3)</td>
+			<td>Y</td>
+			<td>N</td>
+			<td>Y</td>
+			<td>N</td>
+			<td>N</td>
+			<td>Y</td>
+			<td>Y</td>
+			<td>Y</td>
+			<td>N</td>
+			<td>Y</td>
 			<td>N</td>
 		</tr>
 		<tr height="20">
-			<td height="20" style="height: 20px;">OptiTrack</td>
+			<td height="20" style="height: 20px;">OptiTrack</br>(Motive 2.1.1)</td>
 			<td>N</td>
+			<td>Y</td>
 			<td>N</td>
 			<td>N</td>
 			<td>N</td>
@@ -278,8 +278,6 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>N</td>
 			<td>N</td>
 			<td>Y</td>
-			<td>N</td>
-			<td>N</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">Intel RealSense</td>
@@ -292,7 +290,6 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>Y</td>
 			<td>Y</td>
 			<td>N</td>
-			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
 		</tr>
@@ -309,11 +306,9 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>N</td>
 			<td>Y</td>
 			<td>Y</td>
-			<td>Y</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">spryTrack</td>
-			<td>N</td>
 			<td>N</td>
 			<td>N</td>
 			<td>N</td>
@@ -328,7 +323,6 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">fusionTrack</td>
-			<td>N</td>
 			<td>N</td>
 			<td>N</td>
 			<td>N</td>
