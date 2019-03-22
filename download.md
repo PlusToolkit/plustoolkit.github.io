@@ -22,7 +22,6 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 - PlusApp-...-**Ultrasonix-5.7-Win32**: Package to be used on Ultrasonix systems (running on Windows XP embedded or Windows 7 operating system); running Ultrasonix Exam software version between 5.7.0 and 6.0.2. MicronTracker and Microsoft Media Foundation imaging devices are not supported. Executables are 32-bit applications.
 - PlusApp-...-**Ultrasonix-6.1-Win32**: Package to be used on Ultrasonix systems (running on Windows XP embedded or Windows 7 operating system); running Ultrasonix Exam software version 6.1.1 and later. MicronTracker and Microsoft Media Foundation imaging devices are not supported. Executables are 32-bit applications.
 - PlusApp-...-**ThorLabs-Win32**: Package to be used for connecting to ThorLabs spectrometers on 32/64-bit, Windows 7 and Windows 8 systems. Requires ThorLabs drivers installed (otherwise Plus applications will fail to start). Executables are 32-bit applications.
-- PlusApp-...-**Interson-MTC-3.6-Win32**: Package to be used for connecting to Interson USB ultrasound probes on 32/64-bit, Windows 7 and Windows 8 systems. Requires Interson USB probe drivers installed (otherwise Plus applications will fail to start). With MicronTracker 3.6 SDK support. Executables are 32-bit applications.
 - PlusApp-...-**Interson-MTC-3.7-Win32**: Package to be used for connecting to Interson USB ultrasound probes on 32/64-bit, Windows 7 and Windows 8 systems. Requires Interson USB probe drivers installed (otherwise Plus applications will fail to start). With MicronTracker 3.7 SDK support. Executables are 32-bit applications.
 - PlusApp-...-**Telemed-Win32**: Package to be used for connecting to Telemed Ultrasound systems on 32/64-bit, Windows 7 and Windows 8 systems. Executables are 32-bit applications.
 - PlusApp-...-**BK-Win32**: Package to be used for connecting to BK Ultrasound systems on 32/64-bit, Windows 7 and Windows 8 systems. Requires BK OEM interface license. Package is available on request.
@@ -134,8 +133,22 @@ Pre-compiled binary releases are available for Windows 7 / 8 / 10 / embedded XP 
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
+			<td>Y</td>
 			<td>N</td>
 			<td>Y</td>
+			<td>Y</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px;">OpenCV Video</td>
+			<td>Y</td>
+			<td>Y</td>
+			<td>Y</td>
+			<td>Y</td>
+			<td>Y</td>
+			<td>Y</td>
+			<td>Y</td>
+			<td>Y</td>
+			<td>N</td>
 			<td>Y</td>
 			<td>Y</td>
 		</tr>
