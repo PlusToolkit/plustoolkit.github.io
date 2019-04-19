@@ -73,18 +73,15 @@ There are a few steps required to add the device to the project.
 ### PlusBuild
 * In the root `CMakeLists.txt` of the [PlusBuild](https://github.com/PlusToolkit/PlusBuild) repository, add an option for the device.
   * Example: `OPTION(PLUS_USE_YourDeviceName "Provide support for <your device description>" OFF)`
-* In the `<PlusBuild>\Superbuild\External_PlusLib.cmake` file, add a line to the end of the `ExternalProject_Add(PlusLib ...` command to pass your device option to the PlusLib project
-  * Example: `-DPLUS_USE_YourDeviceName:BOOL=${PLUS_USE_YourDeviceName}`
 * If necessary, add an include of any external SDKs necessary for your device
-
 ``` cmake
 IF(PLUS_USE_YourDeviceName)
   INCLUDE(SuperBuild/External_DeviceSDK.cmake)
 ENDIF()
 ```
-
 * Add it as a dependency to the PlusLib project (this ensures correct build order in PlusBuild)
-
+* In the `<PlusBuild>\Superbuild\External_PlusLib.cmake` file, add a line to the end of the `ExternalProject_Add(PlusLib ...` command to pass your device option to the PlusLib project
+  * Example: `-DPLUS_USE_YourDeviceName:BOOL=${PLUS_USE_YourDeviceName}`
 ``` cmake
 IF(PLUS_USE_YourDeviceName AND NOT <externalSDK>_DIR)
   LIST(APPEND PlusLib_DEPENDENCIES <externalSDK>)
@@ -157,6 +154,23 @@ SET_TESTS_PROPERTIES(YourDeviceNameTest1 PROPERTIES FAIL_REGULAR_EXPRESSION "ERR
   * `<PlusLib>\src\PlusDataCollection\<YourDeviceDirectory>\vtkPlusYourDeviceNameSource.h`
 * It is highly recommended that you duplicate an existing device and modify it for your purposes. Various aspects to these files are described below.
 
+### Device Factory
+Plus uses the factory design pattern to create devices in code. To connect your device to the factory system modify `vtkPlusDeviceFactory.cxx` to add the following:
+
+In headers area:
+```c++
+#ifdef PLUS_USE_YourDevice
+  #include "vtkPlusYourDevice.h"
+#endif
+```
+
+and in the factory constructor:
+```c++
+#ifdef PLUS_USE_YourDevice
+  RegisterDevice("YourDevice", "vtkPlusYourDevice", (PointerToDevice)& vtkPlusYourDevice::New);
+#endif
+```
+
 ### Channels, Data Sources, and Buffers
 The following is the terminology necessary to understanding data storage and manipulation in Plus.
 * A data source is a class that contains a buffer, and meta data specific to a source of data from your device. This may be a tool, video, or text field. For example, a tracker may be able to track multiple tools, each of which must have its own data source.
@@ -165,7 +179,7 @@ The following is the terminology necessary to understanding data storage and man
 
 Plus devices are able to operate on any number of input channels, and store data to output data sources. A device may configure any number of output channels, which are composed of combinations of output data sources depending on the purpose and design of the underlying device.
 
-The key classes in data storage are `vtkPlusChannel`, `vtkPlusDataSource`, `vtkPlusBuffer`, `PlusTrackedFrame`, `vtkPlusTrackedFrameList`, and `PlusBufferItem`.
+The key classes in data storage are `vtkPlusChannel`, `vtkPlusDataSource`, `vtkPlusBuffer`, `igsioTrackedFrame`, `vtkIGSIOTrackedFrameList`, and `PlusBufferItem`.
 
 ### Function Breakdown
 The following assumes you have a device class called `YourDevice`.
