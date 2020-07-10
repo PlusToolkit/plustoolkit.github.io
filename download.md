@@ -341,6 +341,20 @@ Mac OS X and Linux:
 			<td>N</td>
 			<td>Y</td>
 		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px;">Clarius</td>
+			<td>N</td>
+			<td>Y</td>
+			<td>N</td>
+			<td>N</td>
+			<td>N</td>
+			<td>N</td>
+			<td>N</td>
+			<td>N</td>
+			<td>N</td>
+			<td>N</td>
+			<td>N</td>
+		</tr>
 	</tbody>
 </table>
 
