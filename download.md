@@ -351,5 +351,6 @@ Mac OS X and Linux:
   - MSVCP120.dll missing => [install VS2013 redistributable](http://www.microsoft.com/en-us/download/details.aspx?id=40784) and restart your computer
   - MSVCP140.dll missing => [install VS2015 redistributable](https://www.microsoft.com/en-ca/download/details.aspx?id=48145) and restart your computer
 	- Embedded XP requires XP SP3 and Visual Studio 2013 Redistributable x86 installed.
+  - VCRUNTIME140_1.dll missing => [install VS2015-2019 redistributable](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)
 
 <p style="text-align: right;"> <a href="http://c3.gostats.com/summary.xml?id=352601" target="_blank" title="statistics"><img alt="statistics" border="0" src="http://c3.gostats.com/bin/count/a_352601/t_4/i_79/z_0/show_visitors/counter.png" style="border-width: 0px; width: auto; height: auto; display: none !important;" /></a></p>
