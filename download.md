@@ -39,7 +39,7 @@ Other:
 - PlusApp-...-**OptiTrack-Telemed-Win32**: Package to be used for connecting to Telemed Ultrasound systems and to OptiTrack using Motive 2.0 on 32/64-bit, Windows 7 and Windows 8 systems. Executables are 32-bit applications. Package is available on request.
 
 Mac OS X and Linux:
-- Plus can be built and packaged for Linux and Mac OSX operating systems as described in the [Developer's guide](developersguide.md). If help is needed, [submit an issue on the GitHub project page](https://github.com/PlusToolkit/PlusLib/issues/new).
+- Plus can be built and packaged for Linux and Mac OSX operating systems as described in the [Developer's guide](developersguide.md). If help is needed, [create a discussion on the GitHub project page](https://github.com/PlusToolkit/PlusLib/discussions).
 
 **Supported devices in latest development snapshots**
 
