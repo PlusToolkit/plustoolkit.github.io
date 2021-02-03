@@ -66,7 +66,7 @@ ENDIF()
 ### Non-CMake enabled SDK
 If your SDK comes from another source, such as an installer, you will be required to write a find module that locates the necessary include directories and library files.
 
-You should place your find module in the `<PlusBuild>\Modules` folder in order for PlusBuild to be able to use it. There are many examples online and in the `Modules` folder of how to write a find module. If you are stuck, you can create a discussion on the [PlusLib](https://github.com/PlusToolkit/PlusLib/discussions) discussion page.
+You should place your find module in the `<PlusBuild>\Modules` folder in order for PlusBuild to be able to use it. There are many examples online and in the `Modules` folder of how to write a find module. If you are stuck, you can create a discussion on the [PlusLib](https://github.com/PlusToolkit/PlusLib/discussions) discussions page.
 
 ## CMake
 There are a few steps required to add the device to the project.
