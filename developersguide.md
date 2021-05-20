@@ -44,17 +44,4 @@ Contributing
 We follow the standard [GitHub Flow](https://guides.github.com/introduction/flow/) process. In short: send a pull request with proposed changes. See more information [here](https://github.com/PlusToolkit/PlusBuild/blob/master/CONTRIBUTING.md).
 
 When making code changes, please follow Plus coding conventions. The Astyle formatter can be used to quickly format a file to Plus standards.
-* PLUS format:
-  * --style=allman
-  * --indent=spaces=2
-  * --align-pointer=type
-  * --indent-switches
-  * --indent-cases
-  * --indent-namespaces
-  * --indent-preproc-block
-  * --indent-col1-comments
-  * --pad-oper
-  * --unpad-paren
-  * --add-brackets
-  * --convert-tabs
-  * --mode=c
+* [PLUS format](https://github.com/PlusToolkit/PlusLib/blob/master/.astylerc)
