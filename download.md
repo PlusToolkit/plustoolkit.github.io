@@ -82,9 +82,12 @@ Mac OS X and Linux:
 			Win64</td>
 			<td style="width: 99px;">Clarius<br />
 			Win64</td>
+			<td style="width: 99px;">ClariusOEM<br />
+			Win64</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">NDI Polaris &amp; Aurora</td>
+			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
@@ -112,6 +115,7 @@ Mac OS X and Linux:
 			<td>Y</td>
 			<td>N</td>
 			<td>N</td>
+			<td>N</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">NDI Certus</td>
@@ -125,6 +129,7 @@ Mac OS X and Linux:
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
+			<td>N</td>
 			<td>N</td>
 			<td>N</td>
 		</tr>
@@ -142,6 +147,7 @@ Mac OS X and Linux:
 			<td>Y</td>
 			<td>N</td>
 			<td>N</td>
+			<td>N</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">OpticalMarkerTracker</td>
@@ -157,6 +163,7 @@ Mac OS X and Linux:
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
+			<td>N</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">OpenCV Video</td>
@@ -172,6 +179,7 @@ Mac OS X and Linux:
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
+			<td>N</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">Stealthlink</td>
@@ -187,6 +195,7 @@ Mac OS X and Linux:
 			<td>N</td>
 			<td>N</td>
 			<td>N</td>
+			<td>N</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">Ultrasonix (5.7)</td>
@@ -194,6 +203,7 @@ Mac OS X and Linux:
 			<td>N</td>
 			<td>N</td>
 			<td>Y</td>
+			<td>N</td>
 			<td>N</td>
 			<td>N</td>
 			<td>N</td>
@@ -217,6 +227,7 @@ Mac OS X and Linux:
 			<td>N</td>
 			<td>N</td>
 			<td>N</td>
+			<td>N</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">Telemed</td>
@@ -232,6 +243,7 @@ Mac OS X and Linux:
 			<td>Y</td>
 			<td>N</td>
 			<td>N</td>
+			<td>N</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">Interson</td>
@@ -242,6 +254,7 @@ Mac OS X and Linux:
 			<td>N</td>
 			<td>N</td>
 			<td>Y</td>
+			<td>N</td>
 			<td>N</td>
 			<td>N</td>
 			<td>N</td>
@@ -262,6 +275,7 @@ Mac OS X and Linux:
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
+			<td>Y</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">Brachy steppers</td>
@@ -277,6 +291,7 @@ Mac OS X and Linux:
 			<td>Y</td>
 			<td>N</td>
 			<td>N</td>
+			<td>N</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">ThorLabs spectrometer</td>
@@ -288,6 +303,7 @@ Mac OS X and Linux:
 			<td>N</td>
 			<td>N</td>
 			<td>Y</td>
+			<td>N</td>
 			<td>N</td>
 			<td>N</td>
 			<td>N</td>
@@ -307,6 +323,7 @@ Mac OS X and Linux:
 			<td>Y</td>
 			<td>N</td>
 			<td>N</td>
+			<td>N</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">OptiTrack<br />(Motive 2.1.1)</td>
@@ -322,6 +339,7 @@ Mac OS X and Linux:
 			<td>N</td>
 			<td>Y</td>
 			<td>Y</td>
+			<td>Y</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">Intel RealSense</td>
@@ -334,6 +352,7 @@ Mac OS X and Linux:
 			<td>Y</td>
 			<td>Y</td>
 			<td>N</td>
+			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
@@ -352,6 +371,7 @@ Mac OS X and Linux:
 			<td>Y</td>
 			<td>N</td>
 			<td>N</td>
+			<td>N</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">fusionTrack</td>
@@ -367,9 +387,27 @@ Mac OS X and Linux:
 			<td>N</td>
 			<td>Y</td>
 			<td>N</td>
+			<td>N</td>
 		</tr>
 		<tr height="20">
-			<td height="20" style="height: 20px;">Clarius</td>
+			<td height="20" style="height: 20px;">Clarius (Cast)</td>
+			<td>N</td>
+			<td>N</td>
+			<td>N</td>
+			<td>N</td>
+			<td>N</td>
+			<td>N</td>
+			<td>N</td>
+			<td>N</td>
+			<td>N</td>
+			<td>N</td>
+			<td>N</td>
+			<td>Y</td>
+			<td>N</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px;">Clarius (OEM)</td>
+			<td>N</td>
 			<td>N</td>
 			<td>N</td>
 			<td>N</td>
