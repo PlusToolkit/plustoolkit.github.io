@@ -9,7 +9,7 @@ description: ""
 
 {% include JB/setup %}
 
-Source code
+GitHub Repositories
 -----------
 
 Plus toolkit contains three main repositories:
