@@ -31,9 +31,9 @@ Usage:
         {% else %}
           <li>
         {% endif %}
-        <a href="{{ BASE_PATH }}{{node.url}}" class="active"></a>
+        <a href="{{ BASE_PATH }}{{node.url}}" class="active">
         {% if node.image != null %}
-          <img style="height: 1em; vertical-align:middle; margin: 0px" src="{{node.image}}"></img>
+          <img style="height: 1em; vertical-align:middle; margin: 0px" src="{{node.image}}"/>
         {% endif %}
         {{node.title}}</a></li>
       {% endif %}
