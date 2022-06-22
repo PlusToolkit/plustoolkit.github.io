@@ -1,6 +1,6 @@
 ---
 layout: page
-title: GitHub
+title: Source code
 group: navigation
 order: 7
 image: "images/GitHub-Mark-Light-32px.png"
