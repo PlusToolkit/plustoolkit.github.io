@@ -31,10 +31,11 @@ Usage:
         {% else %}
           <li>
         {% endif %}
+        <a href="{{ BASE_PATH }}{{node.url}}" class="active"></a>
         {% if node.image != null %}
-          <img style="height: 1em; vertical-align:top; margin: 0px" src="{{node.image}}"></img>
+          <img style="height: 1em; vertical-align:middle; margin: 0px" src="{{node.image}}"></img>
         {% endif %}
-        <a href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a></li>
+        {{node.title}}</a></li>
       {% endif %}
     {% endif %}
   {% endfor %}
