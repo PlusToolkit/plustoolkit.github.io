@@ -33,7 +33,7 @@ Usage:
         {% endif %}
 
         {% if node.layout == "link" %}
-          <a href="{{node.link_url}}" class="active">
+          <a href="{{node.linkurl}}" class="active">
         {% else %}
           <a href="{{ BASE_PATH }}{{node.url}}" class="active">
         {% endif %}

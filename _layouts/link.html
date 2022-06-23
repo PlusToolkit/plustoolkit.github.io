@@ -4,19 +4,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     {% assign time = 0 %}
-    {% assign targetname = page.target %}
+    {% assign linkname = page.link %}
  
     {% if page.time %}
     {% assign time = page.time %}
     {% endif %}
     
-    {% if page.targetname %}
-    {% assign targetname = page.targetname %}
+    {% if page.linkname %}
+    {% assign linkname = page.linkname %}
     {% endif %}
 
-    {% capture title %}Redirecting to {{ targetname }}{% endcapture %}
-    {% if page.targettitle %}
-    {% assign title = page.targettitle %}
+    {% capture title %}Redirecting to {{ linkname }}{% endcapture %}
+    {% if page.title %}
+    {% assign title = page.title %}
     {% endif %}
     <meta http-equiv="refresh" content="{{ time }};url={{ page.link }}"/>
     <link rel="canonical" href="{{ page.link }}"/>
@@ -36,7 +36,7 @@
     <p>{{ page.message }}</p>
     {% endif %}
 
-    <p>Redirecting to <a href="{{ page.link }}">{{ page.link }}</a>.</p>
+    <p>Redirecting to <a href="{{ page.link }}">{{ linkname }}</a>.</p>
 
 </body>
 </html>
