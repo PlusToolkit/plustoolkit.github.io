@@ -1,9 +1,10 @@
 ---
-layout: page
+layout: link
 title: User's guide
 group: navigation
 order: 4
 description: ""
+link_url: "http://perk-software.cs.queensu.ca/plus/doc/nightly/user/index.html"
 ---
 {% include JB/setup %}
 
