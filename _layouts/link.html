@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     {% assign time = 0 %}
-    {% assign linkname = page.link %}
+    {% assign linkname = page.linkurl %}
  
     {% if page.time %}
     {% assign time = page.time %}
@@ -18,8 +18,8 @@
     {% if page.title %}
     {% assign title = page.title %}
     {% endif %}
-    <meta http-equiv="refresh" content="{{ time }};url={{ page.link }}"/>
-    <link rel="canonical" href="{{ page.link }}"/>
+    <meta http-equiv="refresh" content="{{ time }};url={{ page.linkurl }}"/>
+    <link rel="canonical" href="{{ page.linkurl }}"/>
     <title>{{ title }}</title>
     <style>
         body {
@@ -36,7 +36,7 @@
     <p>{{ page.message }}</p>
     {% endif %}
 
-    <p>Redirecting to <a href="{{ page.link }}">{{ linkname }}</a>.</p>
+    <p>Redirecting to <a href="{{ page.linkurl }}">{{ linkname }}</a>.</p>
 
 </body>
 </html>
