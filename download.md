@@ -36,7 +36,6 @@ Supported on Windows 7 or Windows XP Embedded:
 Other:
 - PlusApp-...-**StealthLink-Win32**: Package to be used for connecting to Medtronic navigation systems through StealthLink interface on 32/64-bit, Windows 7 and Windows 8 systems. Requires StealthLink license. Package is available on request.
 - PlusApp-...-**BK-Win32**: Package to be used for connecting to BK Ultrasound systems on 32/64-bit, Windows 7 and Windows 8 systems. Requires BK OEM interface license. Package is available on request.
-- PlusApp-...-**OptiTrack-Telemed-Win32**: Package to be used for connecting to Telemed Ultrasound systems and to OptiTrack using Motive 2.0 on 32/64-bit, Windows 7 and Windows 8 systems. Executables are 32-bit applications. Package is available on request.
 
 Mac OS X and Linux:
 - Plus can be built and packaged for Linux and Mac OSX operating systems as described in the [Developer's guide](developersguide.md). If help is needed, [create a discussion on the GitHub project page](https://github.com/PlusToolkit/PlusLib/discussions).
