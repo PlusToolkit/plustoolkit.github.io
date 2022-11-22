@@ -17,7 +17,7 @@ General Note:
 - 64-bit applications are only supported on 64-bit versions of Windows.
 - Plus applications running on different operating systems can exchange data between each other through OpenIGTLink.
 
-Supported on Windows 10, Windows 8.1:
+Supported on Windows 10 and 11:
 - PlusApp-...**-Win32**: Generic 32-bit release.  Executables are 32-bit applications.
 - PlusApp-...**-Win64**: Generic 64-bit release. Executables are 64-bit applications. It can record more frames in memory and reconstruct larger volumes than the 32-bit release but less hardware devices are supported
 - PlusApp-...-**ThorLabs-Win32**: Package to be used for connecting to ThorLabs spectrometers. Requires ThorLabs drivers installed (otherwise Plus applications will fail to start). Executables are 32-bit applications.
@@ -25,17 +25,13 @@ Supported on Windows 10, Windows 8.1:
 - PlusApp-...-**Telemed-Win32**: Package to be used for connecting to Telemed Ultrasound systems. Executables are 32-bit applications.
 - PlusApp-...-**spryTrack-Telemed-Win32**: Package to be used for connecting to Telemed Ultrasound systems and to spryTrack. Executables are 32-bit applications.
 - PlusApp-...-**fusionTrack-Win64**: Package to be used for connecting to Atracsys fusionTrack. Executables are 64-bit applications.
-
-Supported on Windows 10:
 - PlusApp-...-**Clarius-Win64**: Package to be used for connecting to Clarius Ultrasound systems. Executables are 64-bit applications.
+- PlusApp-...-**StealthLink-Win32**: Package to be used for connecting to Medtronic navigation systems through StealthLink interface on 32/64-bit. Requires StealthLink license. Package is available [on request](contact.md).
+- PlusApp-...-**BK-Win32**: Package to be used for connecting to BK Ultrasound systems on 32/64-bit, Windows 7 and Windows 8 systems. Requires BK OEM interface license. Package is available [on request](contact.md).
 
-Supported on Windows 7 or Windows XP Embedded:
-- PlusApp-...-**Ultrasonix-5.7-Win32**: Package to be used on Ultrasonix systems (running on Windows XP embedded or Windows 7 operating system); running Ultrasonix Exam software version between 5.7.0 and 6.0.2. MicronTracker and Microsoft Media Foundation imaging devices are not supported. Executables are 32-bit applications.
-- PlusApp-...-**Ultrasonix-6.1-Win32**: Package to be used on Ultrasonix systems (running on Windows XP embedded or Windows 7 operating system); running Ultrasonix Exam software version 6.1.1 and later. MicronTracker and Microsoft Media Foundation imaging devices are not supported. Executables are 32-bit applications.
-
-Other:
-- PlusApp-...-**StealthLink-Win32**: Package to be used for connecting to Medtronic navigation systems through StealthLink interface on 32/64-bit, Windows 7 and Windows 8 systems. Requires StealthLink license. Package is available on request.
-- PlusApp-...-**BK-Win32**: Package to be used for connecting to BK Ultrasound systems on 32/64-bit, Windows 7 and Windows 8 systems. Requires BK OEM interface license. Package is available on request.
+Supported on Ultrasonix ultrasound systems (running on Windows XP or XP embedded):
+- PlusApp-...-**Ultrasonix-5.7-Win32**: Package to be used with Ultrasonix Exam software version between 5.7.0 and 6.0.2. MicronTracker and Microsoft Media Foundation imaging devices are not supported. Executables are 32-bit applications.
+- PlusApp-...-**Ultrasonix-6.1-Win32**: Package to be used with Ultrasonix Exam software version 6.1.1 and later. MicronTracker and Microsoft Media Foundation imaging devices are not supported. Executables are 32-bit applications.
 
 Mac OS X and Linux:
 - Plus can be built and packaged for Linux and Mac OSX operating systems as described in the [Developer's guide](developersguide.md). If help is needed, [create a discussion on the GitHub project page](https://github.com/PlusToolkit/PlusLib/discussions).
