@@ -23,6 +23,7 @@ Supported on Windows 10 and 11:
 - PlusApp-...-**ThorLabs-Win32**: Package to be used for connecting to ThorLabs spectrometers. Requires ThorLabs drivers installed (otherwise Plus applications will fail to start). Executables are 32-bit applications.
 - PlusApp-...-**Interson-MTC-3.7-Win32**: Package to be used for connecting to Interson USB ultrasound probes. Requires Interson USB probe drivers installed (otherwise Plus applications will fail to start). With MicronTracker 3.7 SDK support. Executables are 32-bit applications.
 - PlusApp-...-**Telemed-Win32**: Package to be used for connecting to Telemed Ultrasound systems. Executables are 32-bit applications.
+- PlusApp-...-**Telemed-Win64**: Package to be used for connecting to Telemed Ultrasound systems. Executables are 64-bit applications.
 - PlusApp-...-**spryTrack-Telemed-Win32**: _Stable only_ - Package to be used for connecting to Telemed Ultrasound systems and to spryTrack. Executables are 32-bit applications.
 - PlusApp-...-**spryTrack-Telemed-Win64**: Package to be used for connecting to Telemed Ultrasound systems and to spryTrack. Executables are 64-bit applications.
 - PlusApp-...-**fusionTrack-Win64**: Package to be used for connecting to Atracsys fusionTrack. Executables are 64-bit applications.
@@ -53,6 +54,9 @@ Mac OS X and Linux:
 		<col />
 		<col />
 		<col />
+		<col />
+		<col />
+		<col />
 	</colgroup>
 	<tbody>
 		<tr height="20">
@@ -61,6 +65,8 @@ Mac OS X and Linux:
 			<td style="width: 79px;">Win64</td>
 			<td style="width: 99px;">Telemed<br />
 			Win32</td>
+			<td style="width: 99px;">Telemed<br />
+			Win64</td>
 			<td style="width: 107px;">Ultrasonix-5.7<br />
 			Win32</td>
 			<td style="width: 152px;">Ultrasonix-6.1<br />
@@ -99,12 +105,14 @@ Mac OS X and Linux:
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
+			<td>Y</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">NDI Ascension</td>
 			<td>Y</td>
 			<td>N</td>
 			<td>Y</td>
+			<td>N</td>
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
@@ -122,6 +130,7 @@ Mac OS X and Linux:
 			<td>Y</td>
 			<td>N</td>
 			<td>Y</td>
+			<td>N</td>
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
@@ -139,6 +148,7 @@ Mac OS X and Linux:
 			<td>Y</td>
 			<td>N</td>
 			<td>Y</td>
+			<td>N</td>
 			<td>N</td>
 			<td>N</td>
 			<td>Y</td>
@@ -161,6 +171,7 @@ Mac OS X and Linux:
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
+			<td>Y</td>
 			<td>N</td>
 			<td>Y</td>
 			<td>Y</td>
@@ -170,6 +181,7 @@ Mac OS X and Linux:
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">OpenCV Video</td>
+			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
@@ -195,6 +207,7 @@ Mac OS X and Linux:
 			<td>N</td>
 			<td>N</td>
 			<td>N</td>
+			<td>N</td>
 			<td>Y</td>
 			<td>N</td>
 			<td>N</td>
@@ -204,6 +217,7 @@ Mac OS X and Linux:
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">Ultrasonix (5.7)</td>
+			<td>N</td>
 			<td>N</td>
 			<td>N</td>
 			<td>N</td>
@@ -225,6 +239,7 @@ Mac OS X and Linux:
 			<td>N</td>
 			<td>N</td>
 			<td>N</td>
+			<td>N</td>
 			<td>Y</td>
 			<td>N</td>
 			<td>N</td>
@@ -240,6 +255,7 @@ Mac OS X and Linux:
 			<td height="20" style="height: 20px;">Telemed</td>
 			<td>N</td>
 			<td>N</td>
+			<td>Y</td>
 			<td>Y</td>
 			<td>N</td>
 			<td>N</td>
@@ -261,6 +277,7 @@ Mac OS X and Linux:
 			<td>N</td>
 			<td>N</td>
 			<td>N</td>
+			<td>N</td>
 			<td>Y</td>
 			<td>N</td>
 			<td>N</td>
@@ -272,6 +289,7 @@ Mac OS X and Linux:
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">Microsoft Media foundation</td>
+			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
@@ -292,6 +310,7 @@ Mac OS X and Linux:
 			<td>Y</td>
 			<td>N</td>
 			<td>Y</td>
+			<td>N</td>
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
@@ -306,6 +325,7 @@ Mac OS X and Linux:
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">ThorLabs spectrometer</td>
+			<td>N</td>
 			<td>N</td>
 			<td>N</td>
 			<td>N</td>
@@ -328,6 +348,7 @@ Mac OS X and Linux:
 			<td>Y</td>
 			<td>N</td>
 			<td>N</td>
+			<td>N</td>
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
@@ -343,6 +364,7 @@ Mac OS X and Linux:
 			<td>N</td>
 			<td>Y</td>
 			<td>N</td>
+			<td>Y</td>
 			<td>N</td>
 			<td>N</td>
 			<td>N</td>
@@ -357,6 +379,7 @@ Mac OS X and Linux:
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">Intel RealSense</td>
+			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
 			<td>Y</td>
@@ -383,6 +406,7 @@ Mac OS X and Linux:
 			<td>N</td>
 			<td>N</td>
 			<td>N</td>
+			<td>N</td>
 			<td>Y</td>
 			<td>Y</td>
 			<td>N</td>
@@ -391,6 +415,7 @@ Mac OS X and Linux:
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">fusionTrack</td>
+			<td>N</td>
 			<td>N</td>
 			<td>N</td>
 			<td>N</td>
@@ -420,11 +445,13 @@ Mac OS X and Linux:
 			<td>N</td>
 			<td>N</td>
 			<td>N</td>
+			<td>N</td>
 			<td>Y</td>
 			<td>N</td>
 		</tr>
 		<tr height="20">
 			<td height="20" style="height: 20px;">Clarius (OEM)</td>
+			<td>N</td>
 			<td>N</td>
 			<td>N</td>
 			<td>N</td>
