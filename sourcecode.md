@@ -15,7 +15,7 @@ GitHub Repositories
 - [PlusToolkit](https://github.com/PlusToolkit): Organization containing all Plus toolkit repositories.
 
 Plus toolkit contains three main repositories:
-- [PlusLib](https://github.com/PlusToolkit/PlusLib/): Library that contains all data acquisition and processing implementation. It contains a few sipmle tools and test applications but primarily intended to be linked into software applications.
+- [PlusLib](https://github.com/PlusToolkit/PlusLib/): Library that contains all data acquisition and processing implementation. It contains a few simple tools and test applications but primarily intended to be linked into software applications.
 - [PlusApp](https://github.com/PlusToolkit/PlusApp/): Software applications with graphical user interface that use PlusLib to make features available to end users.
 - [PlusBuild](https://github.com/PlusToolkit/PlusBuild/): Small project that downloads and builds PlusLib, PlusApp and all their dependencies (VTK, ITK, etc.).
 
