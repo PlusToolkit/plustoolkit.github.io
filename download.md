@@ -360,7 +360,7 @@ Mac OS X and Linux:
 			<td>N</td>
 		</tr>
 		<tr height="20">
-			<td height="20" style="height: 20px;">OptiTrack<br />(Motive 2.3.2)</td>
+			<td height="20" style="height: 20px;">OptiTrack<br />(Motive 3.1.2)</td>
 			<td>N</td>
 			<td>Y</td>
 			<td>N</td>
