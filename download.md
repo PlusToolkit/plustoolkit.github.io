@@ -8,7 +8,7 @@ description: ""
 {% include JB/setup %}
 
 - **[Latest stable release](https://github.com/PlusToolkit/PlusLib/releases/tag/Plus-2.8.0)**
-- **[Latest development snapshot](http://perk-software.cs.queensu.ca/plus/packages/nightly):** This contains the latest features and fixes, but it is not tested as thoroughly as stable releases.
+- **[Latest development snapshot](https://nightly.link/PlusToolkit/PlusLib/workflows/nightly/master):** This contains the latest features and fixes, but it is not tested as thoroughly as stable releases.
 
 **Editions**
 
