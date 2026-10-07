@@ -8,18 +8,7 @@ description: ""
 {% include JB/setup %}
 
 - **[Latest stable release](https://github.com/PlusToolkit/PlusLib/releases/tag/Plus-2.8.0)**
-- **Latest development snapshot:** This contains the latest features and fixes, but it is not tested as thoroughly as stable releases.
-  - [PlusApp-Win64](https://nightly.link/PlusToolkit/PlusLib/workflows/nightly/master/PlusApp-Win64.zip?status=completed)
-  - [PlusApp-Win32](https://nightly.link/PlusToolkit/PlusLib/workflows/nightly/master/PlusApp-Win32.zip?status=completed)
-  - [PlusApp-Telemed-Win64](https://nightly.link/PlusToolkit/PlusLib/workflows/nightly/master/PlusApp-Telemed-Win64.zip?status=completed)
-  - [PlusApp-Telemed-Win32](https://nightly.link/PlusToolkit/PlusLib/workflows/nightly/master/PlusApp-Telemed-Win32.zip?status=completed)
-  - [PlusApp-spryTrack-Telemed-Win64](https://nightly.link/PlusToolkit/PlusLib/workflows/nightly/master/PlusApp-spryTrack-Telemed-Win64.zip?status=completed)
-  - [PlusApp-fusionTrack-Win64](https://nightly.link/PlusToolkit/PlusLib/workflows/nightly/master/PlusApp-fusionTrack-Win64.zip?status=completed)
-  - [PlusApp-MicronTracker-4.1-Win64](https://nightly.link/PlusToolkit/PlusLib/workflows/nightly/master/PlusApp-MicronTracker-4.1-Win64.zip?status=completed)
-  - [PlusApp-Clarius-Win64](https://nightly.link/PlusToolkit/PlusLib/workflows/nightly/master/PlusApp-Clarius-Win64.zip?status=completed)
-  - [PlusApp-ClariusOEM-Win64](https://nightly.link/PlusToolkit/PlusLib/workflows/nightly/master/PlusApp-ClariusOEM-Win64.zip?status=completed)
-  - [PlusApp-Interson-Win32](https://nightly.link/PlusToolkit/PlusLib/workflows/nightly/master/PlusApp-Interson-Win32.zip?status=completed)
-  - [PlusApp-Thorlabs-Win32](https://nightly.link/PlusToolkit/PlusLib/workflows/nightly/master/PlusApp-Thorlabs-Win32.zip?status=completed)
+- **[Latest development snapshot](https://github.com/PlusToolkit/PlusLib/releases/tag/Plus-2.9.0)**: This contains the latest features and fixes, but it is not tested as thoroughly as stable releases. The installers are rebuilt every night.
 
 **Editions**
 
